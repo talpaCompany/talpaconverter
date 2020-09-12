@@ -10,32 +10,39 @@
     <body>
         <main>
             <header>
-                <h1 id="brand">ChameleonApp</h1>
+                    <img id="logo" src="assets/img/logo.gif" alt="logo">
+                    <h1 id="brand">chameleonApp</h1>
             </header>
             <section id="conversor">
                 <form id="conversor-form">
-                    <h2>What would you like to convert?</h2>
+                    <h2>Convert your value</h2>
                     <label for="init-value">Value</label>
                     <input id="init-value" name="initValue" type="number" placeholder="Enter the value here">
-                    <div id="units">
-                        <label for="unitFrom">From</label>
-                        <select id="unitFrom">
-                            <optgroup label="temperature">
-                                <option value="celsius">celsius</option>
-                                <option value="fahrenheit">fahrenheit</option>
-                            </optgroup>
-                        </select>
-                        <label for="unitTo">To</label>
-                        <select id="unitTo">
-                            <optgroup label="temperature">
-                                <option value="fahrenheit">fahrenheit</option>
-                                <option value="celsius">celsius</option>
-                            </optgroup>
-                        </select>
-                    </div>
-                    <button>Convert</button>
+                    <label for="unitFrom">From</label>
+                    <select id="unitFrom">
+                        <optgroup label="temperature">
+                            <option value="celsius">celsius</option>
+                            <option value="fahrenheit">fahrenheit</option>
+                        </optgroup>
+                    </select>
+                    <label for="unitTo">To</label>
+                    <select id="unitTo">
+                        <optgroup label="temperature">
+                            <option value="fahrenheit">fahrenheit</option>
+                            <option value="celsius">celsius</option>
+                        </optgroup>
+                    </select>
+                    <button id="convert" class="button">Convert</button>
                 </form>
             </section>
+            <footer>
+                <p>&copy; Chameleon - 2020</p>
+            </footer>
         </main>
+        <script>
+            document.querySelector('#convert').onclick = (e) => {
+                e.preventDefault();
+            }
+        </script>
     </body>
 </html>
