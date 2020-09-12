@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+/* Setup */
+:root {
+    --main-bg-color: #353535;
+    --menu-bg-color: #DC143C;
+    --menu-height: 55px;
+    --conversor-bg-color: #DC143C;
+}
+
+/* Reset HTML */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+main {
+    background-color: var(--main-bg-color);
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    display:flex;
+    height: var(--menu-height);
+    background: var(--menu-bg-color);
+    justify-content: center;
+    align-items: center;
+}
+
+header #brand {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+    line-height: var(--menu-height);
+}
+
+section#conversor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - var(--menu-height)); 
+}
+
+#conversor-form {
+    display: flex;
+    flex-flow: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 30px 25px;
+    background: var(--conversor-bg-color);
+}
+
+#conversor-form h2 {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#conversor-form label {
+    color: white;
+    font-size: 1.2em;
+}
+
+#conversor-form input, #conversor-form select {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 0px;
+    font-size: 1.2em;
+}
+
+#conversor-form #units {
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+}
+
+#conversor-form button {
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 0px;
+    background: #ddd;
+    color: #444;
+}
+
+@media (max-width: 600px) {
+    * {
+        font-size: 12px;
+    }
+    
+    section#conversor {
+        margin: 0 10px;
+    }
+    #conversor-form #units {
+        flex-direction: column;
+    }
+}
