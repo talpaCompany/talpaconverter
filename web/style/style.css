@@ -39,7 +39,7 @@ header {
 
 header #brand {
     font-size: 1.5em;
-    color: white;
+    color: var(--second-color);
     line-height: var(--menu-height);
 }
 
@@ -97,13 +97,13 @@ section#conversor {
 
 #conversor-form h2 {
     font-size: 1.5em;
-    color: white;
+    color: var(--second-color);
     text-align: center;
     margin-bottom: 20px;
 }
 
 #conversor-form label {
-    color: white;
+    color: var(--second-color);
     font-size: 1.2em;
 }
 
@@ -118,8 +118,8 @@ section#conversor {
 #conversor-form button {
     font-size: 1.2em;
     padding: 10px;
-    background: #ddd;
-    color: #444;
+    background: var(--second-color);
+    color: var(--third-color);
 }
 
 .button {

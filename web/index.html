@@ -17,7 +17,7 @@
                 <form id="conversor-form">
                     <h2>Convert your value</h2>
                     <label for="init-value">Value</label>
-                    <input id="init-value" name="initValue" type="number" placeholder="Enter the value here">
+                    <input id="init-value" name="initValue" type="number" placeholder="Enter the value here" required>
                     <label for="unitFrom">From</label>
                     <select id="unitFrom">
                         <optgroup label="temperature">
@@ -39,10 +39,5 @@
                 <p>&copy; Chameleon - 2020</p>
             </footer>
         </main>
-        <script>
-            document.querySelector('#convert').onclick = (e) => {
-                e.preventDefault();
-            }
-        </script>
     </body>
 </html>
