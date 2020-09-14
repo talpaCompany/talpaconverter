@@ -21,13 +21,17 @@
     outline: none;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
+/* main */
 main {
     background-color: var(--second-color);
     height: 100%;
     width: 100%;
 }
+
+/* header */
 
 header {
     display:flex;
@@ -35,6 +39,8 @@ header {
     background: var(--first-color);
     justify-content: center;
     align-items: center;
+    box-shadow: 0 2px 2px 0px rgba(51, 51, 51, 0.5);
+
 }
 
 header #brand {
@@ -75,6 +81,7 @@ header #logo {
 
 }
 
+/* Form convert */
 
 section#conversor {
     display: flex;
@@ -133,12 +140,41 @@ section#conversor {
     box-shadow: none;
 }
 
+/* result board */
+
+#result-board {
+    display: none;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+    background: var(--first-color);
+    color: var(--second-color);
+}
+
+#result-board h2, #result-board span {
+    color: var(--second-color);
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+#result-board #to-value {
+    color: var(--second-color);
+    font-size: 2.2rem;
+    font-weight: 600;
+
+}
+
+/* footer style */
+
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     background: var(--first-color);
     height: var(--menu-height);
+    border-top: 2px solid var(--fourth-color);
 }
 
 footer p {

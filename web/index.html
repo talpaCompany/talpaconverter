@@ -35,9 +35,22 @@
                     <button id="convert" class="button">Convert</button>
                 </form>
             </section>
+            <section id="result-board">
+                <h2><span id="from-value">0 ºC</span> converted is...</h2>
+                <p id="to-value">0 ºF</p>
+            </section>
             <footer>
                 <p>&copy; Chameleon - 2020</p>
             </footer>
+            <script>
+                document.querySelector('#convert').onclick = (e) => {
+                    e.preventDefault();
+                    const idBoard = '#result-board';
+                    const resultBoard = document.querySelector(idBoard);
+                    resultBoard.style.display = 'flex';
+                    window.location.href = `${idBoard}`;
+                }
+            </script>
         </main>
     </body>
 </html>
