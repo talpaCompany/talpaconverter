@@ -2,11 +2,11 @@
 
 /* Setup */
 :root {
-    --first-color: #577590;
-    --second-color: #F7F4EA;
-    --third-color: #1E1E24;
-    --fourth-color: #FA824C;
-    --fifth-color: #945D5E;
+    --first-color: #23CE6B;
+    --second-color: #F0F0E0;
+    --third-color: #041B15;
+    --fourth-color: #EF476F;
+    --fifth-color: #2D82B7;
     --menu-height: 55px;
 }
 
@@ -53,13 +53,13 @@ header #logo {
     width: 50px;
     height: 50px;
     animation-name: changeColor;
-    animation-duration: 60s;
-    animation-iteration-count: infinte;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes changeColor {
     0% {
-        filter: hue-rotate(0deg);
+        filter: hue-rotate(240deg);
     }
 
     20% {
@@ -87,7 +87,7 @@ section#conversor {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - var(--menu-height));
+    min-height: calc(100vh - var(--menu-height));
     width: 100%;
 }
 
@@ -120,6 +120,7 @@ section#conversor {
     padding: 10px;
     border-radius: 0px;
     font-size: 1.2em;
+    background: white;
 }
 
 #conversor-form button {

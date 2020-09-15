@@ -11,7 +11,7 @@
         <main>
             <header>
                     <img id="logo" src="assets/img/logo.gif" alt="logo">
-                    <h1 id="brand">chameleonApp</h1>
+                    <h1 id="brand">Chameleon Convert</h1>
             </header>
             <section id="conversor">
                 <form id="conversor-form">
@@ -21,15 +21,23 @@
                     <label for="unitFrom">From</label>
                     <select id="unitFrom">
                         <optgroup label="temperature">
-                            <option value="celsius">celsius</option>
-                            <option value="fahrenheit">fahrenheit</option>
+                            <option value="0-1">celsius</option>
+                            <option value="0-2">fahrenheit</option>
+                        </optgroup>
+                        <optgroup label="metric">
+                            <option value="3-4">centimeters</option>
+                            <option value="3-5">meters</option>
                         </optgroup>
                     </select>
                     <label for="unitTo">To</label>
                     <select id="unitTo">
                         <optgroup label="temperature">
-                            <option value="fahrenheit">fahrenheit</option>
-                            <option value="celsius">celsius</option>
+                            <option value="0-2">fahrenheit</option>
+                            <option value="0-1">celsius</option>
+                        </optgroup>
+                        <optgroup label="metric">
+                            <option value="3-5">meters</option>
+                            <option value="3-4">centimeters</option>
                         </optgroup>
                     </select>
                     <button id="convert" class="button">Convert</button>
@@ -42,14 +50,58 @@
             <footer>
                 <p>&copy; Chameleon - 2020</p>
             </footer>
+            <script src="js/temperature/degrees.js">
+            </script>
             <script>
-                document.querySelector('#convert').onclick = (e) => {
-                    e.preventDefault();
+                document.querySelector('#conversor-form').onsubmit = (e) => { e.preventDefault()};
+                const validate = () => {
+                    const unitFrom = document.querySelector("#unitFrom");
+                    const unitTo = document.querySelector("#unitTo");
+                    const valueFrom = document.querySelector("#init-value")
+                    const [unitFromParent, unitFromId] = unitFrom.value.split("-");
+                    const [unitToParent, unitToId] = unitTo.value.split("-");
+                    console.log(unitFromId, unitToId);
+                    
+                    console.log(valueFrom.value);
+                    if(valueFrom.value === "") {
+                        valueFrom.setCustomValidity("You must enter a value!");
+                        valueFrom.reportValidity();
+                        return false;
+                    }
+
+                    if (unitFromParent !== unitToParent) {
+                        unitTo.setCustomValidity("The units must be the from the same group");
+                        unitTo.reportValidity();
+                        return false;
+                    }
+
+                    if (unitFromId === unitToId) {
+                        unitTo.setCustomValidity("The units can't be the same");
+                        unitTo.reportValidity();
+                        return false;
+                    }
+
+                    valueFrom.setCustomValidity("");
+                    unitFrom.setCustomValidity("");
+                    unitTo.setCustomValidity("");
+                    return true;
+                }
+                const convert = (e) => {
+                    if(!validate()) return false;
+                    
                     const idBoard = '#result-board';
                     const resultBoard = document.querySelector(idBoard);
                     resultBoard.style.display = 'flex';
                     window.location.href = `${idBoard}`;
+
+                    const valueFrom = document.querySelector("#init-value");
+                    const convertedValue = celsiusToFahrenheit(valueFrom.value);
+
+                    document.querySelector('#from-value').innerHTML = `${valueFrom.value} ºC`;
+                    document.querySelector('#to-value').innerHTML = `${convertedValue} ºF`;
                 }
+
+                document.querySelector('#convert').onclick = convert;
             </script>
         </main>
     </body>
