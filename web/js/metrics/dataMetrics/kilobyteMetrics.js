@@ -19,7 +19,5 @@ function kilobyteToTerabyte(number){
 }
 
 function kilobyteToPetabyte(number){
-    console.log(number / 1000000000000)
+    return number / 1000000000000
 }
-
-kilobyteToPetabyte(1)
