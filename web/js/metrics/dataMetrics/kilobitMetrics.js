@@ -30,4 +30,18 @@ function kilobitToQuiloocteto(number){
     return (number / 8.192).toFixed(5)
 }
 
-kilobitToQuiloocteto(1)
+function kilobitToMegabyte(number){
+    return number / 8000
+}
+
+function kilobitToGigabyte(number){
+    return number / 8000000
+}
+
+function kilobitToTerabyte(number){
+    return number / 8000000000
+}
+
+function kilobitToPetabyte(number){
+    return number / 8000000000000
+}
