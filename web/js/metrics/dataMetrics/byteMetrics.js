@@ -19,7 +19,5 @@ function byteToTerabyte(number){
 }
 
 function byteToPetabyte(number){
-    console.log(number / 1000000000000000)
+    return number / 1000000000000000
 }
-
-byteToPetabyte(1)
