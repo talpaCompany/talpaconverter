@@ -10,9 +10,24 @@
     <body>
         <main>
             <header>
-                    <img id="logo" src="assets/img/logo.gif" alt="logo">
-                    <h1 id="brand">Chameleon Convert</h1>
+                    <a href="#" id="open-menu"><i class="fas fa-bars"></i></a>
+                    <div class="logo-align">
+                        <img id="logo" src="assets/img/logo.gif" alt="logo">
+                        <h1 id="brand">Chameleon Convert</h1>
+                    </div>
             </header>
+            <nav id="navbar">
+                <a id="close-menu" href="#"><i class="fas fa-times"></i></a>
+                <div id="search">
+                    <input id="search-type" type="search" placeholder="Search types">
+                    <button id="btn-search"><i class="fas fa-search"></i></button>
+                </div>
+                <div id="group-types">
+                    <a href="#">Temperature</a>
+                    <a href="#">Finance</a>
+                    <a href="#">Length</a>
+                </div>
+            </nav>
             <section id="conversor">
                 <form id="conversor-form">
                     <h2>Convert your value</h2>
@@ -53,6 +68,25 @@
             <script src="js/temperature/degrees.js">
             </script>
             <script>
+                const btnOpenMenu = document.querySelector("#open-menu");
+                const btnCloseMenu = document.querySelector("#close-menu");
+                const navbar = document.querySelector("#navbar");
+
+                btnOpenMenu.onclick = (e) => {
+                    e.preventDefault();
+                    navbar.style.display = "initial";
+                    navbar.style.animation = "show-menu 0.5s"
+                }
+
+                btnCloseMenu.onclick = (e) => {
+                    e.preventDefault();
+                    navbar.style.animation = "hide-menu 0.5s"
+                    setTimeout(() => {
+                        navbar.style.display = "none";
+                    }, 500);
+                    // navbar.style.display = "none";
+                }
+
                 document.querySelector('#conversor-form').onsubmit = (e) => { e.preventDefault()};
                 const validate = () => {
                     const unitFrom = document.querySelector("#unitFrom");
