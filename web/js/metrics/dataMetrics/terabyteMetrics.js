@@ -6,10 +6,6 @@ function terabyteToKilobyte(number){
     return number / 1000000000
 }
 
-function terabyteToQuiloocteto(number){
-    return number / 9.76600000000
-}
-
 function terabyteToMegabyte(number){
     return number * 1000000
 }

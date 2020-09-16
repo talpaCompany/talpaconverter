@@ -6,10 +6,6 @@ function gigabyteToKilobyte(number){
     return number * 1000000
 }
 
-function gigabyteToQuiloocteto(number){
-    return number * 976563
-}
-
 function gigabyteToMegabyte(number){
     return number * 1000
 }

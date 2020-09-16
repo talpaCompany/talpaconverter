@@ -6,10 +6,6 @@ function megabyteToKilobyte(number){
     return number * 1000
 }
 
-function megabyteToQuiloocteto(number){
-    return number * 977
-}
-
 function megabyteToGigabyte(number){
     return number / 1000
 }

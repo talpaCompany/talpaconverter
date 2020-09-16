@@ -2,10 +2,6 @@ function byteToKilobyte(number){
     return number / 1000
 }
 
-function byteToQuiloocteto(number){
-    return (number / 1024).toFixed(8)
-}
-
 function byteToMegabyte(number){
     return number / 1000000
 }
