@@ -107,6 +107,7 @@ header #logo {
     max-width: 250px;
     padding: 5px 10px;
     transition: 1s;
+    z-index: 99;
 }
 
 #navbar #close-menu {
