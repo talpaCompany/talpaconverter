@@ -1,5 +1,6 @@
 import m from './controller.js';
 
+// Setut of web controls
 const btnOpenMenu = document.querySelector('#open-menu');
 const navbar = document.querySelector('#navbar');
 const btnCloseMenu = document.querySelector('#close-menu');
@@ -14,12 +15,14 @@ const searchMenu = document.querySelector('#search-type');
 const btnSearch = document.querySelector('#btn-search');
 const alert = document.querySelector('#alert');
 
+// groups of metris to Menu
 const groups = {
     temperature: 'temperature',
     dataMetrics: 'data metrics',
     finance: 'finance'
 }
 
+// units types to dropdowns of units
 const types = {
     temperature: {
         celsius: 'celsius',
@@ -138,6 +141,7 @@ const convert = (e) => {
     document.querySelector('#to-value').innerHTML = `${convertedValue} ºF`;
 }
 
+// add events to listeners
 btnOpenMenu.onclick = openMenu;
 btnCloseMenu.onclick = closeMenu;
 btnSearch.onclick = searchGroups;

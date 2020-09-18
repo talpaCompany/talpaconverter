@@ -344,11 +344,10 @@ footer p {
         padding: 0 10px;
     }
 
-    #navbar #links a {
+    #navbar * {
         font-size: 16px;
     }
 }
-
 
 @media (max-width: 500px) {
     #navbar {
