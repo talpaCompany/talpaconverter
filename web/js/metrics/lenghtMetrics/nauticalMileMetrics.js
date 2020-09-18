@@ -38,6 +38,6 @@ function nauticalMileToInch(number){
     return number * 72913
 }
 
-export{nauticalMileToKilometer, nauticalMileToMeter, nauticalMileToCentimeter,
+export default {nauticalMileToKilometer, nauticalMileToMeter, nauticalMileToCentimeter,
     nauticalMileToMillimeter, nauticalMileToMicrometer, nauticalMileToNanometer,
     nauticalMileToMile, nauticalMileToYard, nauticalMileToFeet, nauticalMileToInch}

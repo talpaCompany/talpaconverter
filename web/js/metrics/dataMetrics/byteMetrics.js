@@ -18,4 +18,4 @@ function byteToPetabyte(number){
     return number / 1000000000000000
 }
 
-export{byteToKilobyte, byteToMegabyte, byteToGigabyte, byteToTerabyte, byteToPetabyte}
+export default {byteToKilobyte, byteToMegabyte, byteToGigabyte, byteToTerabyte, byteToPetabyte}

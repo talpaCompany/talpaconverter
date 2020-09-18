@@ -38,5 +38,5 @@ function yardToNauticalMile(number){
     return number / 2025
 }
 
-export{yardToKilometer, yardToMeter, yardToCentimeter, yardToMillimeter, yardToMicrometer,
+export default {yardToKilometer, yardToMeter, yardToCentimeter, yardToMillimeter, yardToMicrometer,
     yardToNanometer, yardToMile, yardToFeet, yardToInch, yardToNauticalMile}
