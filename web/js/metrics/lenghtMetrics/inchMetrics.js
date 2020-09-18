@@ -37,3 +37,6 @@ function inchToFeet(number){
 function inchToNauticalMile(number){
     return number / 72913
 }
+
+export{inchToKilometer, inchToMeter, inchToCentimeter, inchToMillimeter, inchToMicrometer, inchToNanometer,
+    inchToMile, inchToYard, inchToFeet, inchToNauticalMile}

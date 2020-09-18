@@ -37,3 +37,6 @@ function meterToInch(number){
 function meterToNauticalMile(number){
     return (number / 1852).toFixed(7)
 }
+
+export{meterToKilometer, meterToCentimeter, meterToMillimeter, meterToMicrometer, meterToNanometer,
+    meterToMile, meterToYard, meterToFeet, meterToInch, meterToNauticalMile}

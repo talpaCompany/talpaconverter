@@ -37,3 +37,6 @@ function kilometerToInch(number){
 function kilometerToNauticalMile(number){
     return (number / 1.852).toFixed(6)
 }
+
+export{kilometerToMeters, kilometerToCentimeters, kilometerToMillimeters, kilometerToMicrometer, kilometerToNanometer,
+    kilometerToMile, kilometerToYard, kilometerToFeet, kilometerToInch, kilometerToNauticalMile}
