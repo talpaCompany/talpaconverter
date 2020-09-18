@@ -17,3 +17,5 @@ function terabyteToGigabyte(number){
 function terabyteToPetabyte(number){
     return number / 1000
 }
+
+export{terabyteToByte, terabyteToKilobyte, terabyteToMegabyte, terabyteToGigabyte, terabyteToPetabyte}

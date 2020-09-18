@@ -17,3 +17,5 @@ function megabyteToTerabyte(number){
 function megabyteToPetabyte(number){
     return number / 1000000000
 }
+
+export{megabyteToByte, megabyteToKilobyte, megabyteToGigabyte, megabyteToTerabyte, megabyteToPetabyte}

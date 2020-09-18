@@ -17,3 +17,5 @@ function petabyteToGigabyte(number){
 function petabyteToTerabyte(number){
     return number * 1000
 }
+
+export{petabyteToByte, petabyteToKilobyte, petabyteToMegabyte, petabyteToGigabyte, petabyteToTerabyte}

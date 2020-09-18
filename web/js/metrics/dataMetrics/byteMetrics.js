@@ -17,3 +17,5 @@ function byteToTerabyte(number){
 function byteToPetabyte(number){
     return number / 1000000000000000
 }
+
+export{byteToKilobyte, byteToMegabyte, byteToGigabyte, byteToTerabyte, byteToPetabyte}

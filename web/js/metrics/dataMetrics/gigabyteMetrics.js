@@ -17,3 +17,5 @@ function gigabyteToTerabyte(number){
 function gigabyteToPetabyte(number){
     return number / 1000000
 }
+
+export{gigabyteToByte, gigabyteToKilobyte, gigabyteToMegabyte, gigabyteToTerabyte, gigabyteToPetabyte}
