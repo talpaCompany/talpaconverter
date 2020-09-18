@@ -1,3 +1,5 @@
+import m from './controller.js';
+
 const btnOpenMenu = document.querySelector('#open-menu');
 const navbar = document.querySelector('#navbar');
 const btnCloseMenu = document.querySelector('#close-menu');
@@ -64,8 +66,6 @@ const fillTypes = (group) => {
 fillGroups(groups)
 fillTypes('temperature');
 
-
-
 // navbar events
 const openMenu = (e) => {
     e.preventDefault();
@@ -124,8 +124,10 @@ const convert = (e) => {
     
     resultBoard.style.display = 'flex';
     window.location.href = `#result-board`;
-
-    const convertedValue = celsiusToFahrenheit(valueFrom.value);
+    const nameFunc = `${unitFrom.value}To${unitTo.value.replace(/^\w/, l => l.toUpperCase())}`;
+    console.log(nameFunc);
+    // const exec = returnConvert();
+    const convertedValue = 10; //celsiusToFahrenheit(valueFrom.value);
 
     document.querySelector('#from-value').innerHTML = `${valueFrom.value} ºC`;
     document.querySelector('#to-value').innerHTML = `${convertedValue} ºF`;
