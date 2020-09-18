@@ -21,3 +21,6 @@ function kelvinToFahrenheit(degrees){
 function fahrenheitToKelvin(degrees){
     return (((degrees - 32) * 0.55) + 273.15).toFixed(2)
 }
+
+export{kelvinToCelsius, celsiusToKelvin, celsiusToFahrenheit, fahrenheitToCelsius,
+    kelvinToFahrenheit, fahrenheitToKelvin}
