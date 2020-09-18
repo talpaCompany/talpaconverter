@@ -12,6 +12,7 @@ const btnConvert = document.querySelector('#convert');
 const groupTypes = document.querySelector('#group-types');
 const searchMenu = document.querySelector('#search-type');
 const btnSearch = document.querySelector('#btn-search');
+const alert = document.querySelector('#alert');
 
 const groups = {
     temperature: 'temperature',
@@ -99,21 +100,25 @@ const searchGroups = (e) => {
 
 // form-conversor events
 const validate = () => {
+    const msg = (text) => {
+        alert.style.animation = 'fade-in 1s linear 0s alternate forwards';
+        alert.innerHTML = `<p>${text}</p>`;
+        setTimeout(() => {
+            alert.style.animation = 'fade-out 1s linear 0s alternate forwards';
+        }, 4000)
+    }
+
     if(valueFrom.value === "") {
-        valueFrom.setCustomValidity("You must enter a value!");
-        valueFrom.reportValidity();
+        msg("You must enter a value!")
         return false;
     }
 
     if (unitFrom.value === unitTo.value) {
-        unitTo.setCustomValidity("The units mustn't be the same");
-        unitTo.reportValidity();
+        msg("The units mustn't be the same");
         return false;
     }
 
-    valueFrom.setCustomValidity("");
-    unitFrom.setCustomValidity("");
-    unitTo.setCustomValidity("");
+    alert.innerHTML = "";
     return true;
 }
 
