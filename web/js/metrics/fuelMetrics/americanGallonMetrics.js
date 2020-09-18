@@ -9,3 +9,6 @@ function milePerAmericanGallonToKilometerPerLiter(number){
 function milePerAmericanGallonToLiterPer100Kilometers(number){
     return 235.215 / number
 }
+
+export default {milePerAmericanGallonToMilePerImperialGallon, milePerAmericanGallonToKilometerPerLiter,
+    milePerAmericanGallonToLiterPer100Kilometers}
