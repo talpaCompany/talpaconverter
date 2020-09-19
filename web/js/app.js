@@ -13,6 +13,7 @@ const groupTypes = document.querySelector('#group-types');
 const searchMenu = document.querySelector('#search-type');
 // const btnSearch = document.querySelector('#btn-search');
 const alert = document.querySelector('#alert');
+const groupTitle = document.querySelector("#group-title");
 
 // groups of metris to Menu
 const groups = {
@@ -60,6 +61,7 @@ const fillGroups = (groups) => {
 const fillTypes = (group) => {
     unitFrom.innerHTML = "";
     unitTo.innerHTML = "";
+    groupTitle.innerHTML = group.replace(/\b\w/, l => l.toUpperCase());
     for(const [key, value] of Object.entries(types[group])) {
         const option = `<option value="${key}" data-symbol="${value[1]}">${value[0]}</option>`;
         unitFrom.innerHTML += option;
