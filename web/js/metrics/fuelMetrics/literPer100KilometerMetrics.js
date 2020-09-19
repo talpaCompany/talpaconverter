@@ -10,5 +10,8 @@ function literPer100KilometerToKilometerPerLiter(number){
     return 100 / number
 }
 
-export default {literPer100KilometerToMilePerAmericanGallon, literPer100KilometerToMilePerImperialGallon,
-    literPer100KilometerToKilometerPerLiter}
+export default {
+    literPer100KilometerToMilePerAmericanGallon, 
+    literPer100KilometerToMilePerImperialGallon,
+    literPer100KilometerToKilometerPerLiter
+}
