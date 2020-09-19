@@ -34,5 +34,14 @@ function jouleToFootPoundForce(number){
     return (number / 1.356).toFixed(6)
 }
 
-export default {jouleToKilojoule, jouleToGramcalorie, jouleToKilocalorie, jouleToWattHour,
-    jouleToKilowattHour, jouleToEletronVolt, jouleToBTU, jouleToTherm, jouleToFootPoundForce}
+export default {
+    jouleToKilojoule, 
+    jouleToGramcalorie, 
+    jouleToKilocalorie, 
+    jouleToWattHour,
+    jouleToKilowattHour, 
+    jouleToEletronVolt, 
+    jouleToBTU, 
+    jouleToTherm, 
+    jouleToFootPoundForce
+}
