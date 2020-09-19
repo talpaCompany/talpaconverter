@@ -18,4 +18,10 @@ function terabyteToPetabyte(number){
     return number / 1000
 }
 
-export default {terabyteToByte, terabyteToKilobyte, terabyteToMegabyte, terabyteToGigabyte, terabyteToPetabyte}
+export default {
+    terabyteToByte, 
+    terabyteToKilobyte, 
+    terabyteToMegabyte, 
+    terabyteToGigabyte, 
+    terabyteToPetabyte
+}

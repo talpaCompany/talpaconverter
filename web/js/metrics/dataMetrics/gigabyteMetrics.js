@@ -18,4 +18,10 @@ function gigabyteToPetabyte(number){
     return number / 1000000
 }
 
-export default {gigabyteToByte, gigabyteToKilobyte, gigabyteToMegabyte, gigabyteToTerabyte, gigabyteToPetabyte}
+export default {
+    gigabyteToByte, 
+    gigabyteToKilobyte, 
+    gigabyteToMegabyte, 
+    gigabyteToTerabyte, 
+    gigabyteToPetabyte
+}
