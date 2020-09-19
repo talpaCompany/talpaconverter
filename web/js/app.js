@@ -1,5 +1,4 @@
-import m from './controller.js';
-
+import returnConvert from './controller.js';
 // Setut of web controls
 const btnOpenMenu = document.querySelector('#open-menu');
 const navbar = document.querySelector('#navbar');
@@ -12,7 +11,7 @@ const formConversor = document.querySelector('#conversor-form');
 const btnConvert = document.querySelector('#convert');
 const groupTypes = document.querySelector('#group-types');
 const searchMenu = document.querySelector('#search-type');
-const btnSearch = document.querySelector('#btn-search');
+// const btnSearch = document.querySelector('#btn-search');
 const alert = document.querySelector('#alert');
 
 // groups of metris to Menu
@@ -25,17 +24,17 @@ const groups = {
 // units types to dropdowns of units
 const types = {
     temperature: {
-        celsius: 'celsius',
-        kelvin: 'kelvin',
-        fahrenheit: 'fahrenheit'
+        celsius: ['celsius', 'ºC'],
+        kelvin: ['kelvin', 'ºK'],
+        fahrenheit: ['fahrenheit', 'ºF']
     },
     finance: {
-        dollar: 'dollar (U$)',
-        real: 'brazillian real (R$)',
+        dollar: ['dollar (U$)', 'U$'],
+        real: ['brazillian real (R$)', 'R$'],
     },
     dataMetrics: {
-        bit: 'bit',
-        byte: 'byte'
+        bit: ['bit', 'b' ],
+        byte: ['byte', 'B' ]
     } 
 }
 
@@ -62,8 +61,9 @@ const fillTypes = (group) => {
     unitFrom.innerHTML = "";
     unitTo.innerHTML = "";
     for(const [key, value] of Object.entries(types[group])) {
-        unitFrom.innerHTML += `<option value="${key}">${value}</option>`;
-        unitTo.innerHTML += `<option value="${key}">${value}</option>`;
+        const option = `<option value="${key}" data-symbol="${value[1]}">${value[0]}</option>`;
+        unitFrom.innerHTML += option;
+        unitTo.innerHTML += option;
     }
 }
 
@@ -129,21 +129,24 @@ const validate = () => {
 const convert = (e) => {
     if(!validate()) return false;
     
-    
     resultBoard.style.display = 'flex';
     window.location.href = `#result-board`;
     const nameFunc = `${unitFrom.value}To${unitTo.value.replace(/^\w/, l => l.toUpperCase())}`;
-    console.log(nameFunc);
-    // const exec = returnConvert();
-    const convertedValue = 10; //celsiusToFahrenheit(valueFrom.value);
+    
+    const exec = returnConvert(nameFunc);
+    const convertedValue = exec(parseFloat(valueFrom.value));
 
-    document.querySelector('#from-value').innerHTML = `${valueFrom.value} ºC`;
-    document.querySelector('#to-value').innerHTML = `${convertedValue} ºF`;
+    const valueSymbol =  unitFrom.querySelector(`[value="${unitFrom.value}"]`).dataset.symbol;
+    const convertedSymbol =  unitTo.querySelector(`[value="${unitTo.value}"]`).dataset.symbol;
+
+    document.querySelector('#from-value').innerHTML = `${valueFrom.value} ${valueSymbol}`;
+    document.querySelector('#to-value').innerHTML = `${convertedValue} ${convertedSymbol}`;
 }
 
 // add events to listeners
 btnOpenMenu.onclick = openMenu;
 btnCloseMenu.onclick = closeMenu;
-btnSearch.onclick = searchGroups;
+searchMenu.oninput = searchGroups;
+// btnSearch.onclick = searchGroups;
 formConversor.onsubmit = e => e.preventDefault();
 btnConvert.onclick = convert;
