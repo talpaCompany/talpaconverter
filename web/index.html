@@ -13,8 +13,12 @@
                     <a href="#" id="open-menu"><i class="fas fa-bars"></i></a>
                     <div class="logo-align">
                         <img id="logo" src="assets/img/logo.gif" alt="logo">
-                        <h1 id="brand">Chameleon Convert</h1>
+                        <h1 id="brand">Talpa App</h1>
                     </div>
+                    <div id="dropdown-language">
+                        <img id="language" src="./assets/img/en-us.png" alt="en-us" data-value="en">
+                    </div>
+                    
             </header>
             <nav id="navbar">
                 <a id="close-menu" href="#"><i class="fas fa-times"></i></a>
@@ -35,7 +39,7 @@
                 <form id="conversor-form">
                     <h2 id="group-title">Convert your value</h2>
                     <label for="init-value">Value</label>
-                    <input id="init-value" name="initValue" type="number" placeholder="Enter the value here" required>
+                    <input id="init-value" name="initValue" step="0.01" type="number" placeholder="Enter the value here" required>
                     <label for="unitFrom">From</label>
                     <select id="unitFrom">
                         <option value="0">celsius</option>
@@ -54,10 +58,15 @@
                 <p id="to-value">0 ºF</p>
             </section>
             <footer>
-                <p>&copy; Chameleon - 2020</p>
+                <p>&copy; Talpa - 2020</p>
             </footer>
             <!-- <script src="js/temperature/degrees.js"></script> -->
             <script type="module" src="js/app.js"></script>
         </main>
+        <div id="language-options" data-status="closed">
+            <h2>Select your language</h2>
+            <a href="#" data-value="en" data-img="./assets/img/en-us.png"><img src="./assets/img/en-us.png" alt="en-us"></a>
+            <a href="#" data-value="pt" data-img="./assets/img/pt-br.png"><img src="./assets/img/pt-br.png" alt="pt-br"></a>
+        </div>
     </body>
 </html>

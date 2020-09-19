@@ -14,6 +14,8 @@ const searchMenu = document.querySelector('#search-type');
 // const btnSearch = document.querySelector('#btn-search');
 const alert = document.querySelector('#alert');
 const groupTitle = document.querySelector("#group-title");
+const language = document.querySelector("#language");
+const languageOptions = document.querySelector("#language-options");
 
 // groups of metris to Menu
 const groups = {
@@ -39,10 +41,8 @@ const types = {
     } 
 }
 
-
 Object.freeze(groups);
 Object.freeze(types);
-
 
 const fillGroups = (groups) => {
     groupTypes.innerHTML = "";
@@ -61,7 +61,7 @@ const fillGroups = (groups) => {
 const fillTypes = (group) => {
     unitFrom.innerHTML = "";
     unitTo.innerHTML = "";
-    groupTitle.innerHTML = group.replace(/\b\w/, l => l.toUpperCase());
+    groupTitle.innerHTML = groups[group].replace(/\b\w/g, l => l.toUpperCase());
     for(const [key, value] of Object.entries(types[group])) {
         const option = `<option value="${key}" data-symbol="${value[1]}">${value[0]}</option>`;
         unitFrom.innerHTML += option;
@@ -145,6 +145,47 @@ const convert = (e) => {
     document.querySelector('#to-value').innerHTML = `${convertedValue} ${convertedSymbol}`;
 }
 
+const selectLanguage = (e) => {
+    e.preventDefault()
+    
+    if(languageOptions.dataset.status === "closed"){
+        languageOptions.style.animation = "fade-in 0.5s linear 0s normal forwards"
+        languageOptions.style.display = "initial"
+    }
+}
+const setLanguage = ({value, img}) => {
+    language.dataset.value = value;
+    language.src = img;
+    language.alt = value;
+    localStorage.setItem("language", value);
+    localStorage.setItem("language-flag", img);
+}
+languageOptions.querySelectorAll("a").forEach(link => {
+    link.onclick = (e) => {
+        e.preventDefault();
+        const {dataset} = link;
+        setLanguage(dataset);
+        languageOptions.style.animation = "fade-out 0.5s linear 0s normal forwards";
+        setTimeout(() => languageOptions.style.display = "none");
+    }
+});
+
+const setup = () => {
+    if(localStorage.getItem('language') == "null" || localStorage.getItem('language-flag') == "null") {
+        localStorage.setItem("language", 'en');
+        localStorage.setItem("language-flag", './assets/img/en-us.png');
+    }
+}
+
+setup()
+
+const lang = {
+    value: localStorage.getItem('language'),
+    img: localStorage.getItem('language-flag')
+}
+
+setLanguage(lang);
+
 // add events to listeners
 btnOpenMenu.onclick = openMenu;
 btnCloseMenu.onclick = closeMenu;
@@ -152,3 +193,4 @@ searchMenu.oninput = searchGroups;
 // btnSearch.onclick = searchGroups;
 formConversor.onsubmit = e => e.preventDefault();
 btnConvert.onclick = convert;
+language.onclick = selectLanguage;

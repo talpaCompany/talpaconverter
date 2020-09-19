@@ -1,8 +1,14 @@
 const lang = {
     header: {
-        brand: "Chameleon Convert"
+        brand: "Talpa App"
     },
     nav: {
-        searchPlaceholder: "Search types"
+        searchPlaceholder: "search types"
+    },
+    form: {
+        value: 'value',
+        from: 'from',
+        to: 'to',
+        button: 'Convert'
     }
 }

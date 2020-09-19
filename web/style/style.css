@@ -35,7 +35,7 @@ main {
 
 header {
     display:grid;
-    grid-template-columns: 20px 1fr;
+    grid-template-columns: 20px 1fr 24px;
     grid-template-rows: var(--menu-height);
     background: var(--first-color);
     align-items: center;
@@ -82,6 +82,30 @@ header #logo {
     }
 
 }
+
+#dropdown-language {
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#language-options {
+    position: fixed;
+    display: none;
+    background: var(--first-color);
+    height: 100px;
+    z-index: 100;
+    width: 100%;
+    max-width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    border-radius: 5px;
+    border: 2px solid var(--fourth-color);
+}
+
+
 
 #navbar {
     position: fixed;
@@ -142,7 +166,7 @@ header #logo {
 }
 
 #navbar #search-type {
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 50px;
     /* border-top-left-radius: 25px;
     border-bottom-left-radius: 25px; */
