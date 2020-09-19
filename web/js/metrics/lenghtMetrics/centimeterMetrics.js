@@ -38,6 +38,15 @@ function centimeterToNauticalMile(number){
     return (number / 185200).toFixed(9)
 }
 
-export default {centimeterTokilometer, centimeterToMeter, centimeterToMillimeter, centimeterToMicrometer, 
-    centimeterToNanometer, centimeterToMile, centimeterToYard, centimeterToFeet, centimeterToInch,
-    centimeterToNauticalMile}
+export default {
+    centimeterTokilometer, 
+    centimeterToMeter, 
+    centimeterToMillimeter, 
+    centimeterToMicrometer, 
+    centimeterToNanometer, 
+    centimeterToMile, 
+    centimeterToYard, 
+    centimeterToFeet, 
+    centimeterToInch,
+    centimeterToNauticalMile
+}

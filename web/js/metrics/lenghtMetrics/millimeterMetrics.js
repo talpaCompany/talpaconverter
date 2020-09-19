@@ -38,6 +38,15 @@ function millimeterToNauticalMile(number){
     return number / 185200
 }
 
-export default {millimeterToKilometer, millimeterToMeter, millimeterToCentimeter, millimeterToMicrometer,
-    millimeterToNanometer, millimeterToMile, millimeterToYard, millimeterToFeet, millimeterToInch,
-    millimeterToNauticalMile}
+export default {
+    millimeterToKilometer, 
+    millimeterToMeter, 
+    millimeterToCentimeter, 
+    millimeterToMicrometer,
+    millimeterToNanometer, 
+    millimeterToMile, 
+    millimeterToYard, 
+    millimeterToFeet, 
+    millimeterToInch,
+    millimeterToNauticalMile
+}

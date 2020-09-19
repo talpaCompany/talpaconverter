@@ -38,5 +38,15 @@ function inchToNauticalMile(number){
     return number / 72913
 }
 
-export default {inchToKilometer, inchToMeter, inchToCentimeter, inchToMillimeter, inchToMicrometer, inchToNanometer,
-    inchToMile, inchToYard, inchToFeet, inchToNauticalMile}
+export default {
+    inchToKilometer, 
+    inchToMeter, 
+    inchToCentimeter, 
+    inchToMillimeter, 
+    inchToMicrometer, 
+    inchToNanometer,
+    inchToMile, 
+    inchToYard, 
+    inchToFeet, 
+    inchToNauticalMile
+}

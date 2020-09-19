@@ -38,5 +38,15 @@ function feetToNauticalMile(number){
     return number / 6076
 }
 
-export default {feetToKilometer, feetToMeter, feetToCentimeter, feetToMillimeter, feetToMicrometer, feetToNanometer,
-    feetToMile, feetToYard, feetToInch, feetToNauticalMile}
+export default {
+    feetToKilometer, 
+    feetToMeter, 
+    feetToCentimeter, 
+    feetToMillimeter, 
+    feetToMicrometer, 
+    feetToNanometer,
+    feetToMile, 
+    feetToYard, 
+    feetToInch, 
+    feetToNauticalMile
+}
