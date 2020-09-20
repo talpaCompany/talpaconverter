@@ -22,6 +22,7 @@ const root = document.documentElement;
 const lblValue = document.querySelector('#lbl-value');
 const lblFrom = document.querySelector('#lbl-from');
 const lblTo = document.querySelector('#lbl-to');
+const responsability = document.querySelector('#responsability');
 
 // groups of metris to Menu
 const groups = {
@@ -168,7 +169,6 @@ const setup = () => {
     }
     config.setLanguage = defineLanguage(config);
 
-    console.log(config);
     fillGroups(groups)
     fillTypes('temperature');
 
@@ -206,7 +206,6 @@ languageOptions.querySelectorAll("a").forEach(link => {
 
 // update text with language
 const translate = () => {
-    console.log(config);
     const l = config.setLanguage;
 
     searchMenu.placeholder = l.nav.searchPlaceholder.replace(/\b\w/g, w => w.toUpperCase());
@@ -214,6 +213,7 @@ const translate = () => {
     lblFrom.innerHTML = l.form.from.replace(/\b\w/g, w => w.toUpperCase());
     lblTo.innerHTML = l.form.to.replace(/\b\w/g, w => w.toUpperCase());
     btnConvert.innerHTML = l.form.button.replace(/\b\w/g, w => w.toUpperCase());
+    responsability.innerHTML = l.footer.resposability.replace(/\b\w/, w => w.toUpperCase());
 }
 
 

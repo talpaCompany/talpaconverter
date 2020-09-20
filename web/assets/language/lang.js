@@ -7,8 +7,8 @@ export default function defineLaguage(config) {
             lang = english.lang;
             break;
         case 'pt':
-                lang = portuguese.lang;
-                break;
+            lang = portuguese.lang;
+            break;
         default:
             lang = english.lang;
     }
