@@ -22,6 +22,4 @@ export default {
     ...nanometer.default,
     ...nauticalMile.default,
     ...yard.default,
-    group,
-    types
 }

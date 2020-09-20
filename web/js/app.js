@@ -146,7 +146,7 @@ const convert = (e) => {
     document.querySelector('#from-value').innerHTML = `${valueFrom.value} ${valueSymbol}`;
     document.querySelector('#to-value').innerHTML = `${convertedValue} ${convertedSymbol}`;
 }
-
+ 
 const setup = () => {
     const config = {}
     if (localStorage.getItem('language') == null || localStorage.getItem('language-flag') == null) {

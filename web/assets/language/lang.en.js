@@ -15,20 +15,20 @@ export const lang = {
         resposability: 'We perform rigorous conversion tests to ensure maximum accuracy, but we cannot guarantee this in all cases'
     },
     group: {
-        temperature = "Temperature",
-        data = "Data",
-        energy = "Energy",
-        frequencie = "Frequencie",
-        fuel = "Fuel",
-        lenght = "Lenght"
+        temperature : "Temperature",
+        data : "Data",
+        energy : "Energy",
+        frequencie : "Frequencie",
+        fuel : "Fuel",
+        lenght : "Lenght"
     },
     types: {
-        temperature = {
+        temperature : {
             celsius : ["Celsius", "ºC"],
             kelvin : ["Kelvin", "ºK"],
             fahrenheit : ["Fahrenheit", "ºF"]
         },
-        data = {
+        data : {
             byte : ["Byte", "b"],
             gigabyte : ["Gigabyte", "gb"],
             kilobyte : ["Kilobyte", "kb"],
@@ -36,7 +36,7 @@ export const lang = {
             petabyte : ["Petabyte", "pb"],
             terabyte : ["Terabyte", "tb"]
         },
-        energy = {
+        energy : {
             joule : ["joule", "J"],
             kilojoule : ["kilojoule", "KJ"],
             gramcalorie : ["gramcalorie", "gCal"],
@@ -48,19 +48,19 @@ export const lang = {
             therm : ["Therm", "therm"],
             footPoundForce : ["Foot-Pound Force", "lbf"]
         },
-        frequencie = {
+        frequencie : {
             hertz : ["Hertz", "Hz"],
             kiloHertz : ["KiloHertz", "kHz"],
             megaHertz : ["MegaHertz", "mHz"],
             gigaHertz : ["GigaHertz", "gHz"]
         },
-        fuel = {
+        fuel : {
             americanGallon : ["American Gallon", "gal"],
             imperialGallon : ["Imperial Gallon", "gal"],
             kmPerLiter : ["Kilometer per Liter", "km/l"],
             literPer100Km : ["Liter per 100Km", "l/100Km"]
         },
-        lenght = {
+        lenght : {
             centimeter : ["Centimeter", "cm"],
             feet : ["Feet", "ft"],
             inch : ["Inch", "in"],

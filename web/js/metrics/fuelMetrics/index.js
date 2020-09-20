@@ -8,6 +8,4 @@ export default {
     ...imperialGallon.default,
     ...kmPerLiter.default,
     ...literPer100Km.default,
-    group,
-    types
 }

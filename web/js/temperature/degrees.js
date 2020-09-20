@@ -29,7 +29,5 @@ export default {
     fahrenheitToCelsius, 
     kelvinToFahrenheit, 
     fahrenheitToKelvin, 
-    group, 
-    types
 }
 

@@ -8,6 +8,4 @@ export default {
     ...kiloHertz.default,
     ...megaHertz.default,
     ...gigaHertz.default,
-    group,
-    types
 }

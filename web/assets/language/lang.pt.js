@@ -15,20 +15,20 @@ export const lang = {
         resposability: 'Realizamos testes rigorosos de conversão para garantir o máximo de precisão, mas não podemos garantir isso em todos os casos'
     },
     group: {
-        temperature = "Temperatura",
-        data = "Dados",
-        energy = "Energia",
-        frequencie = "Hertz",
-        fuel = "Combustível",
-        lenght = "Comprimento"
+        temperature : "Temperatura",
+        data : "Dados",
+        energy : "Energia",
+        frequencie : "Hertz",
+        fuel : "Combustível",
+        lenght : "Comprimento"
     },
     types: {
-        temperature = {
+        temperature : {
             celsius : ["Celsius", "ºC"],
             kelvin : ["Kelvin", "ºK"],
             fahrenheit : ["Fahrenheit", "ºF"]
         },
-        data = {
+        data : {
             byte : ["Byte", "b"],
             gigabyte : ["Gigabyte", "gb"],
             kilobyte : ["Kilobyte", "kb"],
@@ -36,7 +36,7 @@ export const lang = {
             petabyte : ["Petabyte", "pb"],
             terabyte : ["Terabyte", "tb"]
         },
-        energy = {
+        energy : {
             joule : ["Joule", "J"],
             kilojoule : ["Quilojoule", "KJ"],
             gramcalorie : ["Grama-caloria", "gCal"],
@@ -48,19 +48,19 @@ export const lang = {
             therm : ["Therm", "Therm"],
             footPoundForce : ["Pé-Libra Força", "lbf"]
         },
-        frequencie = {
+        frequencie : {
             hertz : ["Hertz", "Hz"],
             kiloHertz : ["KiloHertz", "kHz"],
             megaHertz : ["MegaHertz", "mHz"],
             gigaHertz : ["GigaHertz", "gHz"]
         },
-        fuel = {
+        fuel : {
             americanGallon : ["Galão Americano", "gal"],
             imperialGallon : ["Galão Imperial", "gal"],
             kmPerLiter : ["Quilometro por Litro", "km/l"],
             literPer100Km : ["Litro por 100Km", "l/100Km"]
         },
-        lenght = {
+        lenght : {
             centimeter : ["Centímetro", "cm"],
             feet : ["Pés", "ft"],
             inch : ["Polegada", "in"],

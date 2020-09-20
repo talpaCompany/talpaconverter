@@ -12,6 +12,4 @@ export default {
     ...megabyte.default,
     ...petabyte.default,
     ...terabyte.default,
-    group,
-    types
 }

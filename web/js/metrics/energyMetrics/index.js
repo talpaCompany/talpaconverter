@@ -20,6 +20,4 @@ export default {
     ...btu.default,
     ...therm.default,
     ...footPoundForce.default,
-    group,
-    types
 }
