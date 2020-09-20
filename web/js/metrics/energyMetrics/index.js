@@ -5,6 +5,7 @@ import * as kilocalorie from './kilocalorieMetrics.js'
 import * as wattHour from './wattHourMetrics.js'
 import * as kilowattHour from './kilowattHourMetrics.js'
 import * as eletronVolt from './eletronVoltMetrics.js'
+import * as btu from './btuMetrics.js'
 
 group.energy = "energy"
 
@@ -15,7 +16,8 @@ types.energy = {
     kilocalorie : ["kilocalorie", "kCal"],
     wattHour : ["wattHour", "Wh"],
     kilowattHour : ["kilowattHour", "kWh"],
-    eletronVolt : ["eletronVolt", "eV"]
+    eletronVolt : ["eletronVolt", "eV"],
+    btu : ["btu", "btu"]
 }
 
 export default {
@@ -25,5 +27,6 @@ export default {
     ...kilocalorie.default,
     ...wattHour.default,
     ...kilowattHour.default,
-    ...eletronVolt.default
+    ...eletronVolt.default,
+    ...btu.default
 }
