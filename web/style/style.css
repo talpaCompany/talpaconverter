@@ -105,6 +105,7 @@ header #dark-mode * {
 
 #language {
     transition: 0.5s;
+    user-select: none;
 }
 
 #language:hover {
@@ -127,8 +128,12 @@ header #dark-mode * {
     border: 2px solid var(--fourth-color);
 }
 
+#language-options * {
+    color: var(--second-color);
+}
 
 
+/* navbar style */
 #navbar {
     position: fixed;
     display: none;
