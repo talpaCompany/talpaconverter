@@ -77,7 +77,8 @@ export const lang = {
         mass : {
             ton : ["Tonelada", "t"],
             kilo : ["Quilo", "Kg"],
-            gram : ["Grama", "g"]
+            gram : ["Grama", "g"],
+            milligram : ["Milligram", "mg"]
         }
     }
 }
