@@ -35,7 +35,7 @@ main {
 
 header {
     display:grid;
-    grid-template-columns: 20px 1fr 24px;
+    grid-template-columns: 20px 1fr 50px 24px;
     grid-template-rows: var(--menu-height);
     background: var(--first-color);
     align-items: center;
@@ -81,6 +81,10 @@ header #logo {
         filter: hue-rotate(720deg) brightness(1.8);
     }
 
+}
+
+header #dark-mode * {
+    color: var(--second-color);
 }
 
 #dropdown-language {

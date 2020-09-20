@@ -16,6 +16,7 @@ const alert = document.querySelector('#alert');
 const groupTitle = document.querySelector("#group-title");
 const language = document.querySelector("#language");
 const languageOptions = document.querySelector("#language-options");
+const darkMode = document.querySelector("#dark-mode");
 
 // groups of metris to Menu
 const groups = {
@@ -186,6 +187,19 @@ const lang = {
 
 setLanguage(lang);
 
+// Dark Mode
+const darkModeFunction = (e) => {
+    const root = document.documentElement;
+    e.preventDefault();
+    const secondColor = getComputedStyle(root).getPropertyValue('--second-color')
+    const thirdColor = getComputedStyle(root).getPropertyValue('--third-color')
+    console.log(searchMenu, thirdColor);
+    root.style.setProperty('--second-color', thirdColor)
+    root.style.setProperty('--third-color', secondColor)
+    
+}
+
+
 // add events to listeners
 btnOpenMenu.onclick = openMenu;
 btnCloseMenu.onclick = closeMenu;
@@ -194,3 +208,4 @@ searchMenu.oninput = searchGroups;
 formConversor.onsubmit = e => e.preventDefault();
 btnConvert.onclick = convert;
 language.onclick = selectLanguage;
+darkMode.onclick = darkModeFunction
