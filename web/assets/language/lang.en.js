@@ -20,7 +20,8 @@ export const lang = {
         energy : "Energy",
         frequencie : "Frequencie",
         fuel : "Fuel",
-        lenght : "Lenght"
+        lenght : "Lenght",
+        mass : "Mass"
     },
     types: {
         temperature : {
@@ -72,6 +73,9 @@ export const lang = {
             nanometer : ["Nanometer", "nm"],
             nauticalMile : ["Nautical Mile", "nmi"],
             yard : ["Yard", "yd"] 
+        },
+        mass : {
+            ton : ["Ton", "t"]
         }
     }
 }
