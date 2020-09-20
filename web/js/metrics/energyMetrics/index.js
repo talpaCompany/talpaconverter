@@ -9,21 +9,6 @@ import * as btu from './btuMetrics.js'
 import * as therm from './thermMetrics.js'
 import * as footPoundForce from './footPoundForceMetrics.js'
 
-group.energy = "energy"
-
-types.energy = {
-    joule : ["joule", "J"],
-    kilojoule : ["kilojoule", "KJ"],
-    gramcalorie : ["gramcalorie", "gCal"],
-    kilocalorie : ["kilocalorie", "kCal"],
-    wattHour : ["wattHour", "Wh"],
-    kilowattHour : ["kilowattHour", "kWh"],
-    eletronVolt : ["eletronVolt", "eV"],
-    btu : ["btu", "btu"],
-    therm : ["therm", "therm"],
-    footPoundForce : ["footPoundForce", "lbf"]
-}
-
 export default {
     ...joule.default,
     ...kilojoule.default,

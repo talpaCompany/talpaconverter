@@ -10,23 +10,6 @@ import * as nanometer from './nanometerMetrics.js'
 import * as nauticalMile from './nauticalMileMetrics.js'
 import * as yard from './yardMetrics.js'
 
-
-group.lenght = "lenght"
-
-types.lenght = {
-    centimeter : ["centimeter", "cm"],
-    feet : ["feet", "ft"],
-    inch : ["inch", "in"],
-    kilometer : ["kilometer", "km"],
-    meter : ["meter", "m"],
-    micrometer : ["micrometer", "μm"],
-    mile : ["mile", "mi"],
-    millimeter : ["millimeter", "mm"],
-    nanometer : ["nanometer", "nm"],
-    nauticalMile : ["nauticalMile", "nmi"],
-    yard : ["yard", "yd"] 
-}
-
 export default {
     ...centimeter.default,
     ...feet.default,
