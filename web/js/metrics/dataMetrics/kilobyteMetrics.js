@@ -18,4 +18,10 @@ function kilobyteToPetabyte(number){
     return number / 1000000000000
 }
 
-export default {kilobyteToByte, kilobyteToMegabyte, kilobyteToGigabyte, kilobyteToTerabyte, kilobyteToPetabyte}
+export default {
+    kilobyteToByte, 
+    kilobyteToMegabyte, 
+    kilobyteToGigabyte, 
+    kilobyteToTerabyte, 
+    kilobyteToPetabyte
+}

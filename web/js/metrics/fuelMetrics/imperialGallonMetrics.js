@@ -10,5 +10,8 @@ function milePerImperialGallonToLiterPer100Kilometer(number){
     return 282.481 / number
 }
 
-export default {milePerImperialGallonToMilePerAmericanGallon, milePerImperialGallonToKilometerPerLiter,
-    milePerImperialGallonToLiterPer100Kilometer}
+export default {
+    milePerImperialGallonToMilePerAmericanGallon, 
+    milePerImperialGallonToKilometerPerLiter,
+    milePerImperialGallonToLiterPer100Kilometer
+}

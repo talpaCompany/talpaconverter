@@ -38,5 +38,15 @@ function mileToNauticalMile(number){
     return (number / 1.151).toFixed(6)
 }
 
-export default {mileToKilometer, mileToMeter, mileToCentimeter, mileToMillimeter, mileToMicrometer,
-    mileToNanometer, mileToYard, mileToFeet, mileToInch, mileToNauticalMile}
+export default {
+    mileToKilometer, 
+    mileToMeter, 
+    mileToCentimeter, 
+    mileToMillimeter,
+    mileToMicrometer,
+    mileToNanometer, 
+    mileToYard, 
+    mileToFeet, 
+    mileToInch, 
+    mileToNauticalMile
+}

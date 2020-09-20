@@ -18,4 +18,10 @@ function megabyteToPetabyte(number){
     return number / 1000000000
 }
 
-export default {megabyteToByte, megabyteToKilobyte, megabyteToGigabyte, megabyteToTerabyte, megabyteToPetabyte}
+export default {
+    megabyteToByte, 
+    megabyteToKilobyte, 
+    megabyteToGigabyte, 
+    megabyteToTerabyte, 
+    megabyteToPetabyte
+}

@@ -22,5 +22,22 @@ function fahrenheitToKelvin(degrees){
     return (((degrees - 32) * 0.55) + 273.15).toFixed(2)
 }
 
-export default {kelvinToCelsius, celsiusToKelvin, celsiusToFahrenheit, 
-    fahrenheitToCelsius, kelvinToFahrenheit, fahrenheitToKelvin}
+group.temperature = "temperature"
+
+types.temperature = {
+    celsius = ["celsius", "ºC"],
+    kelvin = ["kelvin", "ºK"],
+    fahrenheit = ["fahrenheit", "ºF"]
+}
+
+export default {
+    kelvinToCelsius, 
+    celsiusToKelvin, 
+    celsiusToFahrenheit, 
+    fahrenheitToCelsius, 
+    kelvinToFahrenheit, 
+    fahrenheitToKelvin, 
+    group, 
+    types
+}
+
