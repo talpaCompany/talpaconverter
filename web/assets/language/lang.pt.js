@@ -78,7 +78,8 @@ export const lang = {
             ton : ["Tonelada", "t"],
             kilo : ["Quilo", "Kg"],
             gram : ["Grama", "g"],
-            milligram : ["Milligram", "mg"]
+            milligram : ["Miligrama", "mg"],
+            microgram : ["Micrograma", "mcg"]
         }
     }
 }
