@@ -3,6 +3,7 @@ import * as kilojoule from './kilojouleMetrics.js'
 import * as gramcalorie from './gramcalorieMetrics.js'
 import * as kilocalorie from './kilocalorieMetrics.js'
 import * as wattHour from './wattHourMetrics.js'
+import * as kilowattHour from './kilowattHourMetrics.js'
 
 group.energy = "energy"
 
@@ -11,7 +12,8 @@ types.energy = {
     kilojoule : ["kilojoule", "KJ"],
     gramcalorie : ["gramcalorie", "gCal"],
     kilocalorie : ["kilocalorie", "kCal"],
-    wattHour : ["wattHour", "Wh"]
+    wattHour : ["wattHour", "Wh"],
+    kilowattHour : ["kilowattHour", "kWh"]
 }
 
 export default {
@@ -19,5 +21,6 @@ export default {
     ...kilojoule.default,
     ...gramcalorie.default,
     ...kilocalorie.default,
-    ...wattHour.default
+    ...wattHour.default,
+    ...kilowattHour.default
 }
