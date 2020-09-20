@@ -1,4 +1,4 @@
-const lang = {
+export const lang = {
     header: {
         brand: "Talpa App"
     },
@@ -12,3 +12,4 @@ const lang = {
         button: 'Convert'
     }
 }
+

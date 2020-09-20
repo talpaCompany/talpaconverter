@@ -83,6 +83,16 @@ header #logo {
 
 }
 
+header #dark-mode {
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+header #dark-mode:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
 header #dark-mode * {
     color: var(--second-color);
 }
@@ -91,6 +101,14 @@ header #dark-mode * {
     position: relative;
     padding: 5px;
     cursor: pointer;
+}
+
+#language {
+    transition: 0.5s;
+}
+
+#language:hover {
+    transform: scale(1.2);
 }
 
 #language-options {

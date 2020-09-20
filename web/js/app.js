@@ -1,4 +1,5 @@
-import returnConvert from './controller.js';
+import returnConvert from './controller.js'
+import defineLanguage from '../assets/language/lang.js'
 // Setut of web controls
 const btnOpenMenu = document.querySelector('#open-menu');
 const navbar = document.querySelector('#navbar');
@@ -17,6 +18,10 @@ const groupTitle = document.querySelector("#group-title");
 const language = document.querySelector("#language");
 const languageOptions = document.querySelector("#language-options");
 const darkMode = document.querySelector("#dark-mode");
+const root = document.documentElement;
+const lblValue = document.querySelector('#lbl-value');
+const lblFrom = document.querySelector('#lbl-from');
+const lblTo = document.querySelector('#lbl-to');
 
 // groups of metris to Menu
 const groups = {
@@ -42,8 +47,6 @@ const types = {
     } 
 }
 
-Object.freeze(groups);
-Object.freeze(types);
 
 const fillGroups = (groups) => {
     groupTypes.innerHTML = "";
@@ -69,9 +72,6 @@ const fillTypes = (group) => {
         unitTo.innerHTML += option;
     }
 }
-
-fillGroups(groups)
-fillTypes('temperature');
 
 // navbar events
 const openMenu = (e) => {
@@ -146,6 +146,35 @@ const convert = (e) => {
     document.querySelector('#to-value').innerHTML = `${convertedValue} ${convertedSymbol}`;
 }
 
+const setup = () => {
+    const config = {}
+    if (localStorage.getItem('language') == null || localStorage.getItem('language-flag') == null) {
+        localStorage.setItem("language", 'en')
+        localStorage.setItem("language-flag", './assets/img/en-us.png')
+        config.lang = 'en'
+        config.img = './assets/img/en-us.png'
+        
+    } else {
+        config.lang = localStorage.getItem('language')
+        config.img = localStorage.getItem('language-flag')
+    } 
+
+    if (localStorage.getItem('--second-color') !== "null") {
+        let secondColor = localStorage.getItem('--second-color')
+        let thirdColor = localStorage.getItem('--third-color')
+
+        root.style.setProperty('--second-color', secondColor);
+        root.style.setProperty('--third-color', thirdColor);
+    }
+    config.setLanguage = defineLanguage(config);
+
+    console.log(config);
+    fillGroups(groups)
+    fillTypes('temperature');
+
+    return config;
+}
+
 const selectLanguage = (e) => {
     e.preventDefault()
     
@@ -154,12 +183,16 @@ const selectLanguage = (e) => {
         languageOptions.style.display = "initial"
     }
 }
-const setLanguage = ({value, img}) => {
-    language.dataset.value = value;
+const setLanguage = ({lang, img}) => {
+    language.dataset.value = lang;
     language.src = img;
-    language.alt = value;
-    localStorage.setItem("language", value);
+    language.alt = lang;
+    localStorage.setItem("language", lang);
     localStorage.setItem("language-flag", img);
+    config.lang = lang;
+    config.img = img;
+    config.setLanguage = defineLanguage({lang});
+    translate();
 }
 languageOptions.querySelectorAll("a").forEach(link => {
     link.onclick = (e) => {
@@ -171,34 +204,30 @@ languageOptions.querySelectorAll("a").forEach(link => {
     }
 });
 
-const setup = () => {
-    if(localStorage.getItem('language') == "null" || localStorage.getItem('language-flag') == "null") {
-        localStorage.setItem("language", 'en');
-        localStorage.setItem("language-flag", './assets/img/en-us.png');
-    }
+// update text with language
+const translate = () => {
+    console.log(config);
+    const l = config.setLanguage;
+
+    searchMenu.placeholder = l.nav.searchPlaceholder.replace(/\b\w/g, w => w.toUpperCase());
+    lblValue.innerHTML = l.form.value.replace(/\b\w/g, w => w.toUpperCase());
+    lblFrom.innerHTML = l.form.from.replace(/\b\w/g, w => w.toUpperCase());
+    lblTo.innerHTML = l.form.to.replace(/\b\w/g, w => w.toUpperCase());
+    btnConvert.innerHTML = l.form.button.replace(/\b\w/g, w => w.toUpperCase());
 }
 
-setup()
-
-const lang = {
-    value: localStorage.getItem('language'),
-    img: localStorage.getItem('language-flag')
-}
-
-setLanguage(lang);
 
 // Dark Mode
 const darkModeFunction = (e) => {
-    const root = document.documentElement;
     e.preventDefault();
     const secondColor = getComputedStyle(root).getPropertyValue('--second-color')
     const thirdColor = getComputedStyle(root).getPropertyValue('--third-color')
-    console.log(searchMenu, thirdColor);
     root.style.setProperty('--second-color', thirdColor)
     root.style.setProperty('--third-color', secondColor)
+    localStorage.setItem('--second-color', thirdColor);
+    localStorage.setItem('--third-color', secondColor);
     
 }
-
 
 // add events to listeners
 btnOpenMenu.onclick = openMenu;
@@ -209,3 +238,9 @@ formConversor.onsubmit = e => e.preventDefault();
 btnConvert.onclick = convert;
 language.onclick = selectLanguage;
 darkMode.onclick = darkModeFunction
+
+
+const config = setup()
+setLanguage(config)
+
+translate();

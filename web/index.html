@@ -39,14 +39,14 @@
                 </div>
                 <form id="conversor-form">
                     <h2 id="group-title">Convert your value</h2>
-                    <label for="init-value">Value</label>
+                    <label id="lbl-value" for="init-value">Value</label>
                     <input id="init-value" name="initValue" step="0.01" type="number" placeholder="Enter the value here" required>
-                    <label for="unitFrom">From</label>
+                    <label id="lbl-from" for="unitFrom">From</label>
                     <select id="unitFrom">
                         <option value="0">celsius</option>
                         <option value="1">fahrenheit</option>
                     </select>
-                    <label for="unitTo">To</label>
+                    <label id="lbl-to" for="unitTo">To</label>
                     <select id="unitTo">
                         <option value="1">fahrenheit</option>
                         <option value="0">celsius</option>
@@ -66,8 +66,8 @@
         </main>
         <div id="language-options" data-status="closed">
             <h2>Select your language</h2>
-            <a href="#" data-value="en" data-img="./assets/img/en-us.png"><img src="./assets/img/en-us.png" alt="en-us"></a>
-            <a href="#" data-value="pt" data-img="./assets/img/pt-br.png"><img src="./assets/img/pt-br.png" alt="pt-br"></a>
+            <a href="#" data-lang="en" data-img="./assets/img/en-us.png"><img src="./assets/img/en-us.png" alt="en-us"></a>
+            <a href="#" data-lang="pt" data-img="./assets/img/pt-br.png"><img src="./assets/img/pt-br.png" alt="pt-br"></a>
         </div>
     </body>
 </html>
