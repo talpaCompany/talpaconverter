@@ -75,7 +75,8 @@ export const lang = {
             yard : ["Jarda", "yd"] 
         },
         mass : {
-            ton : ["Tonelada", "t"]
+            ton : ["Tonelada", "t"],
+            kilo : ["Quilo", "Kg"]
         }
     }
 }
