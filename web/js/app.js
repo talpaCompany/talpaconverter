@@ -25,39 +25,22 @@ const lblTo = document.querySelector('#lbl-to');
 const responsability = document.querySelector('#responsability');
 
 // groups of metris to Menu
-const groups = {
-    temperature: 'temperature',
-    dataMetrics: 'data metrics',
-    finance: 'finance'
-}
+let groups = {}
 
 // units types to dropdowns of units
-const types = {
-    temperature: {
-        celsius: ['celsius', 'ºC'],
-        kelvin: ['kelvin', 'ºK'],
-        fahrenheit: ['fahrenheit', 'ºF']
-    },
-    finance: {
-        dollar: ['dollar (U$)', 'U$'],
-        real: ['brazillian real (R$)', 'R$'],
-    },
-    dataMetrics: {
-        bit: ['bit', 'b' ],
-        byte: ['byte', 'B' ]
-    } 
-}
+let types = {}
 
 
 const fillGroups = (groups) => {
     groupTypes.innerHTML = "";
     for (const [key, value] of Object.entries(groups)) {
-        groupTypes.innerHTML += `<a href="#" data-type="${key}">${value.replace(/\b\w/g, l => l.toUpperCase())}</a>`
+        groupTypes.innerHTML += `<a href="#" data-type="${key}">${value.toLowerCase().replace(/^\w/g, l => l.toUpperCase())}</a>`
     }
 
     groupTypes.querySelectorAll('a').forEach(item => item.onclick = (e) => {
         e.preventDefault;
         fillTypes(item.dataset.type);
+        sessionStorage.setItem('group', item.dataset.type);
         closeMenu();
     });
 };
@@ -168,7 +151,10 @@ const setup = () => {
         root.style.setProperty('--third-color', thirdColor);
     }
     config.setLanguage = defineLanguage(config);
-
+    console.log(config.setLanguage);
+    groups =  config.setLanguage.group;
+    types =  config.setLanguage.types;
+    sessionStorage.setItem('group', 'temperature');
     fillGroups(groups)
     fillTypes('temperature');
 
@@ -193,6 +179,10 @@ const setLanguage = ({lang, img}) => {
     config.img = img;
     config.setLanguage = defineLanguage({lang});
     translate();
+    groups =  config.setLanguage.group;
+    types =  config.setLanguage.types;
+    fillGroups(groups)
+    fillTypes(sessionStorage.getItem('group'));
 }
 languageOptions.querySelectorAll("a").forEach(link => {
     link.onclick = (e) => {
@@ -210,6 +200,7 @@ const translate = () => {
 
     searchMenu.placeholder = l.nav.searchPlaceholder.replace(/\b\w/g, w => w.toUpperCase());
     lblValue.innerHTML = l.form.value.replace(/\b\w/g, w => w.toUpperCase());
+    valueFrom.placeholder = l.form.valuePlaceholder.replace(/\b\w/, w => w.toUpperCase());
     lblFrom.innerHTML = l.form.from.replace(/\b\w/g, w => w.toUpperCase());
     lblTo.innerHTML = l.form.to.replace(/\b\w/g, w => w.toUpperCase());
     btnConvert.innerHTML = l.form.button.replace(/\b\w/g, w => w.toUpperCase());

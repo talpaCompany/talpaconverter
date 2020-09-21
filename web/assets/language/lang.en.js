@@ -7,6 +7,7 @@ export const lang = {
     },
     form: {
         value: 'value',
+        valuePlaceholder: "Enter the value here",
         from: 'from',
         to: 'to',
         button: 'Convert'

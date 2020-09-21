@@ -7,6 +7,7 @@ export const lang = {
     },
     form: {
         value: 'valor',
+        valuePlaceholder: "coloque o valor aqui",
         from: 'de',
         to: 'para',
         button: 'converter'
