@@ -79,7 +79,8 @@ export const lang = {
             kilo : ["Quilo", "Kg"],
             gram : ["Grama", "g"],
             milligram : ["Miligrama", "mg"],
-            microgram : ["Micrograma", "mcg"]
+            microgram : ["Micrograma", "mcg"],
+            tonOfDisp : ["Tonelada de Deslocamento", "t"]
         }
     }
 }
