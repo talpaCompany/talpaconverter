@@ -391,7 +391,7 @@ footer {
     flex-direction: column;
     background: var(--first-color);
     height: auto;
-    padding: 10px 0;
+    padding: 10px 20px;
     border-top: 2px solid var(--fourth-color);
     line-height: 1.2em;
 }
@@ -402,6 +402,7 @@ footer p {
 
 footer #responsability {
     font-size: 0.5em;
+    text-align: center;
 }
 
 
