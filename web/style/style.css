@@ -208,8 +208,6 @@ header #dark-mode * {
 #navbar #search-type {
     padding: 10px 20px;
     border-radius: 50px;
-    /* border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px; */
     background: rgba(255, 255, 255, 0.4);
     border-right: none;
     width: 100%;

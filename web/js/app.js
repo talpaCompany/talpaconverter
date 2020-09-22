@@ -31,10 +31,13 @@ let groups = {}
 let types = {}
 
 
+const captilizeCase = sentence => sentence.toLowerCase().replace(/^\w/g, l => l.toUpperCase())
+const sentenceCase = sentence => sentence.toLowerCase().replace(/^\w/, l => l.toUpperCase())
+
 const fillGroups = (groups) => {
     groupTypes.innerHTML = "";
     for (const [key, value] of Object.entries(groups)) {
-        groupTypes.innerHTML += `<a href="#" data-type="${key}">${value.toLowerCase().replace(/^\w/g, l => l.toUpperCase())}</a>`
+        groupTypes.innerHTML += `<a href="#" data-type="${key}">${captilizeCase(value)}</a>`
     }
 
     groupTypes.querySelectorAll('a').forEach(item => item.onclick = (e) => {
@@ -129,14 +132,29 @@ const convert = (e) => {
     document.querySelector('#from-value').innerHTML = `${valueFrom.value} ${valueSymbol}`;
     document.querySelector('#to-value').innerHTML = `${convertedValue} ${convertedSymbol}`;
 }
- 
+
+const defaultLanguage = () => {
+    if (navigator == null) return 'en'
+    console.log(navigator.language.toLowerCase());
+    switch(navigator.language.toLowerCase()) {
+        case 'en-us':
+            return 'en'
+        case 'pt-br':
+            return 'pt'
+        default:
+            return 'en'
+    }
+
+}
+
 const setup = () => {
     const config = {}
     if (localStorage.getItem('language') == null || localStorage.getItem('language-flag') == null) {
-        localStorage.setItem("language", 'en')
-        localStorage.setItem("language-flag", './assets/img/en-us.png')
-        config.lang = 'en'
-        config.img = './assets/img/en-us.png'
+        const prefix = defaultLanguage();
+        localStorage.setItem("language", prefix)
+        localStorage.setItem("language-flag", `./assets/img/${prefix}.png`)
+        config.lang = prefix
+        config.img = `./assets/img/${prefix}.png`
         
     } else {
         config.lang = localStorage.getItem('language')
@@ -170,6 +188,7 @@ const selectLanguage = (e) => {
     }
 }
 const setLanguage = ({lang, img}) => {
+    console.log(lang, img)
     language.dataset.value = lang;
     language.src = img;
     language.alt = lang;
@@ -184,6 +203,7 @@ const setLanguage = ({lang, img}) => {
     fillGroups(groups)
     fillTypes(sessionStorage.getItem('group'));
 }
+
 languageOptions.querySelectorAll("a").forEach(link => {
     link.onclick = (e) => {
         e.preventDefault();
@@ -198,13 +218,13 @@ languageOptions.querySelectorAll("a").forEach(link => {
 const translate = () => {
     const l = config.setLanguage;
 
-    searchMenu.placeholder = l.nav.searchPlaceholder.replace(/\b\w/g, w => w.toUpperCase());
-    lblValue.innerHTML = l.form.value.replace(/\b\w/g, w => w.toUpperCase());
-    valueFrom.placeholder = l.form.valuePlaceholder.replace(/\b\w/, w => w.toUpperCase());
-    lblFrom.innerHTML = l.form.from.replace(/\b\w/g, w => w.toUpperCase());
-    lblTo.innerHTML = l.form.to.replace(/\b\w/g, w => w.toUpperCase());
-    btnConvert.innerHTML = l.form.button.replace(/\b\w/g, w => w.toUpperCase());
-    responsability.innerHTML = l.footer.resposability.replace(/\b\w/, w => w.toUpperCase());
+    searchMenu.placeholder = sentenceCase(l.nav.searchPlaceholder);
+    lblValue.innerHTML = sentenceCase(l.form.value)
+    valueFrom.placeholder = sentenceCase(l.form.valuePlaceholder)
+    lblFrom.innerHTML = sentenceCase(l.form.from)
+    lblTo.innerHTML = sentenceCase(l.form.to)
+    btnConvert.innerHTML = sentenceCase(l.form.button)
+    responsability.innerHTML = sentenceCase(l.footer.resposability)
 }
 
 
