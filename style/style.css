@@ -332,13 +332,17 @@ section#conversor {
 }
 
 #copy-link {
-    color: var(--second-color);
     cursor: pointer;
     padding: 0 10px;
-    transition: .5s;
 }
 
-#copy-link:hover {
+#copy-link i {
+    color: var(--second-color);
+    transition: .5s;
+    font-size: 1.2em;
+}
+
+#copy-link i:hover {
     transform: scale(1.2);
 }
 

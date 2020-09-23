@@ -24,8 +24,13 @@ const lblValue = document.querySelector('#lbl-value');
 const lblFrom = document.querySelector('#lbl-from');
 const lblTo = document.querySelector('#lbl-to');
 const responsability = document.querySelector('#responsability');
-const copyLink = document.createElement("i");
+
+// create copy link
+const copyLink = document.createElement("a");
 copyLink.setAttribute('id', 'copy-link')
+const icon = document.createElement("i")
+icon.className = 'fas fa-copy';
+copyLink.appendChild(icon)
 
 // groups of metris to Menu
 let groups = {}
@@ -78,15 +83,21 @@ const fillGroups = (groups) => {
 const fillTypes = (group) => {
     unitFrom.innerHTML = "";
     unitTo.innerHTML = "";
-    
-    copyLink.classList.add('fas', 'fa-link')
-    copyLink.onclick = (e) => {
-        navigator.clipboard.writeText(`${location.origin}/?category=${group}`).then(() => {
-            const info = config.setLanguage.form.info;
-            msg(info.copy, 'alert info');
-        })
-    }
 
+    copyLink.onclick = (e) => {
+        const textToClipboard = `${location.origin}/?category=${group}`;
+        const temporaryText = document.createElement('input');
+        temporaryText.value = textToClipboard;
+        document.body.appendChild(temporaryText);
+        temporaryText.select()
+
+        document.execCommand('copy')
+        document.body.removeChild(temporaryText)
+        const info = config.setLanguage.form.info;
+        msg(info.copy, 'alert info')
+    }
+    
+    groupTitle.removeChild(groupTitle.firstChild);
     groupTitle.innerHTML = sentenceCase(groups[group])
     groupTitle.appendChild(copyLink)
 
