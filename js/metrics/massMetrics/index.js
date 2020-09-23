@@ -4,6 +4,7 @@ import * as gram from './gramMetrics.js'
 import * as milligram from './milligramMetrics.js'
 import * as microgram from './microgramMetrics.js'
 import * as tonOfDisp from './tonOfDisplacementMetrics.js'
+import * as shortTon from './shortTonMetrics.js'
 
 export default {
     ...ton.default,
@@ -11,5 +12,6 @@ export default {
     ...gram.default,
     ...milligram.default,
     ...microgram.default,
-    ...tonOfDisp.default
+    ...tonOfDisp.default,
+    ...shortTon.default
 }
