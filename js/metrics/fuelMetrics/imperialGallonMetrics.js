@@ -2,7 +2,7 @@ function imperialGallonToAmericanGallon(number){
     return (number / 1.201).toFixed(6)
 }
 
-function imperialGallonToKilometerPerLiter(number){
+function imperialGallonToKmPerLiter(number){
     return (number / 2.825).toFixed(6)
 }
 
@@ -12,6 +12,6 @@ function imperialGallonToLiterPer100Km(number){
 
 export default {
     imperialGallonToAmericanGallon, 
-    imperialGallonToKilometerPerLiter,
+    imperialGallonToKmPerLiter,
     imperialGallonToLiterPer100Km
 }

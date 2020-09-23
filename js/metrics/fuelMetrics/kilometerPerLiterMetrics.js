@@ -1,17 +1,17 @@
-function kilometerPerLiterToAmericanGallon(number){
+function kmPerLiterToAmericanGallon(number){
     return number * 2.352
 }
 
-function kilometerPerLiterToImperialGallon(number){
+function kmPerLiterToImperialGallon(number){
     return number * 2.825
 }
 
-function kilometerPerLiterToLiterPer100Km(number){
+function kmPerLiterToLiterPer100Km(number){
     return 100 / number
 }
 
 export default {
-    kilometerPerLiterToAmericanGallon, 
-    kilometerPerLiterToImperialGallon,
-    kilometerPerLiterToLiterPer100Km
+    kmPerLiterToAmericanGallon, 
+    kmPerLiterToImperialGallon,
+    kmPerLiterToLiterPer100Km
 }
