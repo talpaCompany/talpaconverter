@@ -1,5 +1,6 @@
 import returnConvert from './controller.js'
 import defineLanguage from '../assets/language/lang.js'
+
 // Setut of web controls
 const btnOpenMenu = document.querySelector('#open-menu');
 const navbar = document.querySelector('#navbar');
@@ -33,6 +34,19 @@ let types = {}
 
 const captilizeCase = sentence => sentence.toLowerCase().replace(/^\w/g, l => l.toUpperCase())
 const sentenceCase = sentence => sentence.toLowerCase().replace(/^\w/, l => l.toUpperCase())
+const getUrlParams = (strParams) => {
+    return strParams.replace("?", "")
+        .split("&")
+        .map(str => {
+            const param = str.split('=')
+            const obj = {}
+            obj[param[0]] = param[1]
+            return obj
+        }).reduce((obj, property) => {
+            const newObj = {...obj, ...property}
+            return newObj
+        })
+}
 
 const fillGroups = (groups) => {
     groupTypes.innerHTML = "";
@@ -53,6 +67,7 @@ const fillTypes = (group) => {
     unitFrom.innerHTML = "";
     unitTo.innerHTML = "";
     groupTitle.innerHTML = sentenceCase(groups[group]);
+    
     for(const [key, value] of Object.entries(types[group])) {
         const option = `<option value="${key}" data-symbol="${value[1]}">${value[0]}</option>`;
         unitFrom.innerHTML += option;
@@ -169,13 +184,25 @@ const setup = () => {
         root.style.setProperty('--second-color', secondColor);
         root.style.setProperty('--third-color', thirdColor);
     }
+    
+    // get params from url
+    const params = getUrlParams(location.search)
+
+    let category = 'temperature';
+
     config.setLanguage = defineLanguage(config);
-    console.log(config.setLanguage);
     groups =  config.setLanguage.group;
     types =  config.setLanguage.types;
-    sessionStorage.setItem('group', 'temperature');
-    fillGroups(groups)
-    fillTypes('temperature');
+
+    if (params !== undefined && params.hasOwnProperty('category')) {
+        category = groups.hasOwnProperty(params.category) ? params.category : category
+    }
+    
+    
+    sessionStorage.setItem('group', category);
+    
+    // fillGroups(groups)
+    // fillTypes(category);
 
     return config;
 }
@@ -189,7 +216,6 @@ const selectLanguage = (e) => {
     }
 }
 const setLanguage = ({lang, img}) => {
-    console.log(lang, img)
     language.dataset.value = lang;
     language.src = img;
     language.alt = lang;

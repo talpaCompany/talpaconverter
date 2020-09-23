@@ -364,22 +364,14 @@ section#conversor {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    width: 100vw;
     background: var(--first-color);
     color: var(--second-color);
 }
 
-#result-board h2, #result-board span {
+#result-board p, #result-board span {
     color: var(--second-color);
     font-size: 2rem;
     font-weight: 100;
-}
-
-#result-board #to-value {
-    color: var(--second-color);
-    font-size: 2.2rem;
-    font-weight: 600;
-
 }
 
 /* footer style */
@@ -401,7 +393,7 @@ footer p {
 }
 
 footer #responsability {
-    font-size: 0.5em;
+    font-size: 0.6em;
     text-align: center;
 }
 
@@ -425,4 +417,19 @@ footer #responsability {
         width: 100vw;
         max-width: 100%;
     }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--first-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--fourth-color);
+    border: 1px solid black;
+    border-radius: 10px;
 }
