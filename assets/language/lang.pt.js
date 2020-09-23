@@ -10,7 +10,11 @@ export const lang = {
         valuePlaceholder: "coloque o valor aqui",
         from: 'de',
         to: 'para',
-        button: 'converter'
+        button: 'converter',
+        error: {
+            nullValue: 'É necessário informar um valor!',
+            sameUnits: "As unidades não podem ser iguais!"
+        }
     },
     footer: {
         resposability: 'Realizamos testes rigorosos de conversão para garantir o máximo de precisão, mas não podemos garantir isso em todos os casos'

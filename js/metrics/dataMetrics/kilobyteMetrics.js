@@ -11,7 +11,7 @@ function kilobyteToGigabyte(number){
 }
 
 function kilobyteToTerabyte(number){
-    number / 1000000000
+    return number / 1000000000
 }
 
 function kilobyteToPetabyte(number){
