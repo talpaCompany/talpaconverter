@@ -85,7 +85,7 @@ export const lang = {
             gram : ["Gram", "g"],
             milligram : ["Milligram", "mg"],
             microgram : ["Microgram", "mcg"],
-            tonOfDisp : ["Ton Of Displacemet", "t"]
+            tonOfDisplacement : ["Ton Of Displacemet", "t"]
         }
     }
 }

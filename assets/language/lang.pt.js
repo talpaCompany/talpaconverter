@@ -23,9 +23,9 @@ export const lang = {
         temperature : "Temperatura",
         data : "Dados",
         energy : "Energia",
-        frequencie : "Hertz",
+        frequencie : "Frequência",
         fuel : "Combustível",
-        lenght : "Comprimento",
+        lenght : "Métrica",
         mass : "Massa"
     },
     types: {
@@ -85,7 +85,7 @@ export const lang = {
             gram : ["Grama", "g"],
             milligram : ["Miligrama", "mg"],
             microgram : ["Micrograma", "mcg"],
-            tonOfDisp : ["Tonelada de Deslocamento", "t"]
+            tonOfDisplacement : ["Tonelada de Deslocamento", "t"]
         }
     }
 }
