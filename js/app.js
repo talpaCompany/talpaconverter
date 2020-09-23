@@ -14,7 +14,7 @@ const btnConvert = document.querySelector('#convert');
 const groupTypes = document.querySelector('#group-types');
 const searchMenu = document.querySelector('#search-type');
 // const btnSearch = document.querySelector('#btn-search');
-const alert = document.querySelector('#alert');
+const alertMsg = document.querySelector('#alert');
 const groupTitle = document.querySelector("#group-title");
 const language = document.querySelector("#language");
 const languageOptions = document.querySelector("#language-options");
@@ -24,6 +24,8 @@ const lblValue = document.querySelector('#lbl-value');
 const lblFrom = document.querySelector('#lbl-from');
 const lblTo = document.querySelector('#lbl-to');
 const responsability = document.querySelector('#responsability');
+const copyLink = document.createElement("i");
+copyLink.setAttribute('id', 'copy-link')
 
 // groups of metris to Menu
 let groups = {}
@@ -48,6 +50,16 @@ const getUrlParams = (strParams) => {
         })
 }
 
+const msg = (text, type) => {
+    // alertMsg.attr('class', '');
+    alertMsg.className = type
+    alertMsg.style.animation = 'fade-in 1s linear 0s alternate forwards';
+    alertMsg.innerHTML = `<p>${captilizeCase(text)}</p>`;
+    setTimeout(() => {
+        alertMsg.style.animation = 'fade-out 1s linear 0s alternate forwards';
+    }, 4000)
+}
+
 const fillGroups = (groups) => {
     groupTypes.innerHTML = "";
     for (const [key, value] of Object.entries(groups)) {
@@ -55,7 +67,7 @@ const fillGroups = (groups) => {
     }
 
     groupTypes.querySelectorAll('a').forEach(item => item.onclick = (e) => {
-        e.preventDefault;
+        e.preventDefault();
         fillTypes(item.dataset.type);
         sessionStorage.setItem('group', item.dataset.type);
         closeMenu();
@@ -66,7 +78,18 @@ const fillGroups = (groups) => {
 const fillTypes = (group) => {
     unitFrom.innerHTML = "";
     unitTo.innerHTML = "";
-    groupTitle.innerHTML = sentenceCase(groups[group]);
+    
+    copyLink.classList.add('fas', 'fa-link')
+    copyLink.onclick = (e) => {
+        navigator.clipboard.writeText(`${location.origin}/?category=${group}`).then(() => {
+            const info = config.setLanguage.form.info;
+            msg(info.copy, 'alert info');
+        })
+    }
+
+    groupTitle.innerHTML = sentenceCase(groups[group])
+    groupTitle.appendChild(copyLink)
+
     
     for(const [key, value] of Object.entries(types[group])) {
         const option = `<option value="${key}" data-symbol="${value[1]}">${value[0]}</option>`;
@@ -109,25 +132,18 @@ const searchGroups = (e) => {
 // form-conversor events
 const validate = () => {
     const error = config.setLanguage.form.error;
-    const msg = (text) => {
-        alert.style.animation = 'fade-in 1s linear 0s alternate forwards';
-        alert.innerHTML = `<p>${captilizeCase(text)}</p>`;
-        setTimeout(() => {
-            alert.style.animation = 'fade-out 1s linear 0s alternate forwards';
-        }, 4000)
-    }
-
+    
     if(valueFrom.value === "") {
-        msg(error.nullValue)
+        msg(error.nullValue, 'alert error')
         return false;
     }
 
     if (unitFrom.value === unitTo.value) {
-        msg(error.sameUnits);
+        msg(error.sameUnits, 'alert error');
         return false;
     }
 
-    alert.innerHTML = "";
+    alertMsg.innerHTML = "";
     return true;
 }
 

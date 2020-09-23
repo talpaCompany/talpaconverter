@@ -287,9 +287,16 @@ header #dark-mode * {
     } 
 }
 
+.info {
+    background: #add8e6;
+}
+
+.info * {
+    color:black;
+}
+
 .error {
     background: #fa8072;
-    
 }
 
 .error * {
@@ -322,6 +329,17 @@ section#conversor {
     color: var(--second-color);
     text-align: center;
     margin-bottom: 20px;
+}
+
+#copy-link {
+    color: var(--second-color);
+    cursor: pointer;
+    padding: 0 10px;
+    transition: .5s;
+}
+
+#copy-link:hover {
+    transform: scale(1.2);
 }
 
 #conversor-form label {
@@ -372,6 +390,10 @@ section#conversor {
     color: var(--second-color);
     font-size: 2rem;
     font-weight: 100;
+}
+
+span#to-value {
+    font-weight: bold;
 }
 
 /* footer style */
