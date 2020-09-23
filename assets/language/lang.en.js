@@ -10,7 +10,11 @@ export const lang = {
         valuePlaceholder: "Enter the value here",
         from: 'from',
         to: 'to',
-        button: 'Convert'
+        button: 'Convert',
+        error: {
+            nullValue: 'You must enter a value!',
+            sameUnits: "The units mustn't be the same"
+        }
     },
     footer: {
         resposability: 'We perform rigorous conversion tests to ensure maximum accuracy, but we cannot guarantee this in all cases'

@@ -52,7 +52,7 @@ const fillGroups = (groups) => {
 const fillTypes = (group) => {
     unitFrom.innerHTML = "";
     unitTo.innerHTML = "";
-    groupTitle.innerHTML = groups[group].replace(/\b\w/g, l => l.toUpperCase());
+    groupTitle.innerHTML = sentenceCase(groups[group]);
     for(const [key, value] of Object.entries(types[group])) {
         const option = `<option value="${key}" data-symbol="${value[1]}">${value[0]}</option>`;
         unitFrom.innerHTML += option;
@@ -93,21 +93,22 @@ const searchGroups = (e) => {
 
 // form-conversor events
 const validate = () => {
+    const error = config.setLanguage.form.error;
     const msg = (text) => {
         alert.style.animation = 'fade-in 1s linear 0s alternate forwards';
-        alert.innerHTML = `<p>${text}</p>`;
+        alert.innerHTML = `<p>${captilizeCase(text)}</p>`;
         setTimeout(() => {
             alert.style.animation = 'fade-out 1s linear 0s alternate forwards';
         }, 4000)
     }
 
     if(valueFrom.value === "") {
-        msg("You must enter a value!")
+        msg(error.nullValue)
         return false;
     }
 
     if (unitFrom.value === unitTo.value) {
-        msg("The units mustn't be the same");
+        msg(error.sameUnits);
         return false;
     }
 
@@ -121,8 +122,8 @@ const convert = (e) => {
     
     resultBoard.style.display = 'flex';
     window.location.href = `#result-board`;
-    const nameFunc = `${unitFrom.value}To${unitTo.value.replace(/^\w/, l => l.toUpperCase())}`;
-    
+    const nameFunc = `${unitFrom.value.toLowerCase()}To${captilizeCase(unitTo.value)}`;
+    console.log(nameFunc);
     const exec = returnConvert(nameFunc);
     const convertedValue = exec(parseFloat(valueFrom.value));
 
