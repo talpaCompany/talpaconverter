@@ -256,6 +256,17 @@ const setLanguage = ({lang, img}) => {
     types =  config.setLanguage.types;
     fillGroups(groups)
     fillTypes(sessionStorage.getItem('group'));
+
+    switch(lang) {
+        case 'pt':
+            document.body.lang = 'pt-BR'
+            break;
+        default:
+        case 'en':
+            document.body.lang = 'en-US'
+            break;
+        
+    }
 }
 
 languageOptions.querySelectorAll("a").forEach(link => {
