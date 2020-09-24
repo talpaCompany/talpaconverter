@@ -87,7 +87,8 @@ export const lang = {
             microgram : ["Micrograma", "mcg"],
             tonOfDisplacement : ["Tonelada de Deslocamento", "t"],
             shortTon : ["Tonelada Curta", "t"],
-            stone : ["Stone", "st"]
+            stone : ["Stone", "st"],
+            pound : ["Libra", "lb"]
         }
     }
 }
