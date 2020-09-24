@@ -1,47 +1,47 @@
-function kilowattToJoule(number){
+function kilowatthourToJoule(number){
     return number * 36000000
 }
 
-function kilowattHourToKilojoule(number){
+function kilowatthourToKilojoule(number){
     return number * 3600
 }
 
-function kilowattHourToGramcalorie(number){
+function kilowatthourToGramcalorie(number){
     return number * 860421
 }
 
-function kilowattHourToKilocalorie(number){
+function kilowatthourToKilocalorie(number){
     return number * 860
 }
 
-function kilowattHourToWattHour(number){
+function kilowatthourToWatthour(number){
     return number * 1000
 }
 
-function kilowattHourToEletronVolt(number){
+function kilowatthourToEletronVolt(number){
     //Formula??
 }
 
-function kilowattHourToBTU(number){
+function kilowatthourToBtu(number){
     return number * 3412
 }
 
-function kilowattHourToTherm(number){
+function kilowatthourToTherm(number){
     return (number / 29.3).toFixed(7)
 }
 
-function kilowattHourToFootPoundForce(number){
+function kilowatthourToFootpoundforce(number){
     return number * 2655000000
 }
 
 export default {
-    kilowattToJoule,
-    kilowattHourToKilojoule,
-    kilowattHourToGramcalorie,
-    kilowattHourToKilocalorie,
-    kilowattHourToWattHour,
-    kilowattHourToEletronVolt,
-    kilowattHourToBTU,
-    kilowattHourToTherm,
-    kilowattHourToFootPoundForce
+    kilowatthourToJoule,
+    kilowatthourToKilojoule,
+    kilowatthourToGramcalorie,
+    kilowatthourToKilocalorie,
+    kilowatthourToWatthour,
+    // kilowatthourToEletronVolt,
+    kilowatthourToBtu,
+    kilowatthourToTherm,
+    kilowatthourToFootpoundforce
 }

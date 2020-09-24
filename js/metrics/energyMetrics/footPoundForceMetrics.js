@@ -1,48 +1,48 @@
-function footPoundForceToJoule(number){
+function footpoundforceToJoule(number){
     return number * 1.356
 }
 
-function footPoundForceToKilojoule(number){
+function footpoundforceToKilojoule(number){
     return (number / 738).toFixed(8)
 }
 
-function footPoundForceToGramcalorie(number){
+function footpoundforceToGramcalorie(number){
     return (number / 3.086).toFixed(6)
 }
 
-function footPoundForceToKilocalorie(number){
+function footpoundforceToKilocalorie(number){
     return (number / 3086).toFixed(9)
 }
 
-function footPoundForceToWattHour(number){
+function footpoundforceToWatthour(number){
     return (number / 2655).toFixed(9)
 }
 
-function footPoundForceToKilowattHour(number){
+function footpoundforceToKilowatthour(number){
     return number / 2655000000
 }
 
-function footPoundForceToEletronVolt(number){
+function footpoundforceToEletronVolt(number){
     //Formula??
 }
 
-function footPoundForceToBTU(number){
+function footpoundforceToBtu(number){
     return (number / 778).toFixed(8)
 }
 
-function footPoundForceToTherm(number){
+function footpoundforceToTherm(number){
     return number / 7780000000
 }
 
 export default {
-    footPoundForceToJoule,
-    footPoundForceToKilojoule,
-    footPoundForceToGramcalorie,
-    footPoundForceToKilocalorie,
-    footPoundForceToKilocalorie,
-    footPoundForceToWattHour,
-    footPoundForceToKilowattHour,
-    footPoundForceToEletronVolt,
-    footPoundForceToBTU,
-    footPoundForceToTherm
+    footpoundforceToJoule,
+    footpoundforceToKilojoule,
+    footpoundforceToGramcalorie,
+    footpoundforceToKilocalorie,
+    footpoundforceToKilocalorie,
+    footpoundforceToWatthour,
+    footpoundforceToKilowatthour,
+    // footpoundforceToEletronVolt,
+    footpoundforceToBtu,
+    footpoundforceToTherm
 }

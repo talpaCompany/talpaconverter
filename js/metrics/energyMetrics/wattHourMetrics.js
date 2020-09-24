@@ -1,20 +1,20 @@
-function wattHourToJoule(number){
+function watthourToJoule(number){
     return number * 3600
 }
 
-function wattHourToKilojoule(number){
+function watthourToKilojoule(number){
     return number * 3.6
 }
 
-function wattHourToGramcalorie(number){
+function watthourToGramcalorie(number){
     return number * 860
 }
 
-function wattHourToKilocalorie(number){
+function watthourToKilocalorie(number){
     return (number / 1.162).toFixed(6)
 }
 
-function wattHourToKilowattHour(number){
+function watthourToKilowatthour(number){
     return number / 1000
 }
 
@@ -22,26 +22,26 @@ function wattHoutToEletronVolt(number){
     //Formula
 }
 
-function wattHourToBTU(number){
+function watthourToBtu(number){
     return number * 3.412
 }
 
-function wattHourToTherm(number){
+function watthourToTherm(number){
     return (number / 29300).toExponential()
 }
 
-function wattHourToFootPoundForce(number){
+function watthourToFootpoundforce(number){
     return number * 2655
 }
 
 export default {
-    wattHourToJoule,
-    wattHourToKilojoule,
-    wattHourToGramcalorie,
-    wattHourToKilocalorie,
-    wattHourToKilowattHour,
-    wattHoutToEletronVolt,
-    wattHourToBTU,
-    wattHourToTherm,
-    wattHourToFootPoundForce
+    watthourToJoule,
+    watthourToKilojoule,
+    watthourToGramcalorie,
+    watthourToKilocalorie,
+    watthourToKilowatthour,
+    // wattHoutToEletronVolt,
+    watthourToBtu,
+    watthourToTherm,
+    watthourToFootpoundforce
 }

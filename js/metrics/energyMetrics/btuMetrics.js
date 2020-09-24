@@ -14,11 +14,11 @@ function btuToKilocalorie(number){
     return (number / 3.966).toFixed(6)
 }
 
-function btuToWattHour(number){
+function btuToWatthour(number){
     return (number / 3.412).toFixed(6)
 }
 
-function btuToKilowattHour(number){
+function btuToKilowatthour(number){
     return (number / 3412).toFixed(9)
 }
 
@@ -30,7 +30,7 @@ function btuToTherm(number){
     return (number / 99976).toExponential()
 }
 
-function btuToFootPoundForce(number){
+function btuToFootpoundforce(number){
     return number * 778
 }
 
@@ -39,9 +39,9 @@ export default {
     btuToKilojoule,
     btuToGramcalorie,
     btuToKilocalorie,
-    btuToWattHour,
-    btuToKilowattHour,
+    btuToWatthour,
+    btuToKilowatthour,
     btuToEletronVolt,
     btuToTherm,
-    btuToFootPoundForce
+    btuToFootpoundforce
 }

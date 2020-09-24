@@ -39,20 +39,20 @@ export const lang = {
         },
         data : {
             byte : ["Byte", "b"],
-            gigabyte : ["Gigabyte", "gb"],
             kilobyte : ["Kilobyte", "kb"],
             megabyte : ["Megabyte", "mb"],
-            petabyte : ["Petabyte", "pb"],
-            terabyte : ["Terabyte", "tb"]
+            gigabyte : ["Gigabyte", "gb"],
+            terabyte : ["Terabyte", "tb"],
+            petabyte : ["Petabyte", "pb"]
         },
         energy : {
             joule : ["Joule", "J"],
             kilojoule : ["Quilojoule", "KJ"],
             gramcalorie : ["Grama-caloria", "gCal"],
             kilocalorie : ["Quilo-caloria", "kCal"],
-            wattHour : ["Watt-Hora", "Wh"],
-            kilowattHour : ["Quilowatt-Hora", "kWh"],
-            eletronVolt : ["Eletron-Volt", "eV"],
+            watthour : ["Watt-Hora", "Wh"],
+            kilowatthour : ["Quilowatt-Hora", "kWh"],
+            // eletronVolt : ["Eletron-Volt", "eV"],
             btu : ["BTU", "BTU"],
             therm : ["Therm", "Therm"],
             footPoundForce : ["Pé-Libra Força", "lbf"]

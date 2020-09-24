@@ -10,11 +10,11 @@ function kilojouleToKilocalorie(number){
     return (number / 4.184).toFixed(6)
 }
 
-function kilojouleToWattHour(number){
+function kilojouleToWatthour(number){
     return (number / 3.6).toFixed(6)
 }
 
-function kilojouleToKilowattHour(number){
+function kilojouleToKilowatthour(number){
     return (number / 3600).toFixed(9)
 }
 
@@ -22,7 +22,7 @@ function kilojouleToEletronVolt(number){
     return (number * 9.223e+18)
 }
 
-function kilojouleToBTU(number){
+function kilojouleToBtu(number){
     return (number / 1.055).toFixed(6)
 }
 
@@ -30,7 +30,7 @@ function kilojouleToTherm(number){
     return (number / 105480).toExponential()
 }
 
-function kilojouleToFootPoundForce(number){
+function kilojouleToFootpoundforce(number){
     return number * 738
 }
 
@@ -38,10 +38,10 @@ export default {
     kilojouleToJoule,
     kilojouleToGramcalorie,
     kilojouleToKilocalorie,
-    kilojouleToWattHour,
-    kilojouleToKilowattHour,
+    kilojouleToWatthour,
+    kilojouleToKilowatthour,
     kilojouleToEletronVolt,
-    kilojouleToBTU,
+    kilojouleToBtu,
     kilojouleToTherm,
-    kilojouleToFootPoundForce
+    kilojouleToFootpoundforce
 }

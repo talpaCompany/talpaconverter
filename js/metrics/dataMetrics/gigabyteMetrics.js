@@ -1,5 +1,5 @@
 function gigabyteToByte(number){
-    number * 1000000000
+    return number * 1000000000
 }
 
 function gigabyteToKilobyte(number){

@@ -10,11 +10,11 @@ function gramcalorieToKilocalorie(number){
     return number / 1000
 }
 
-function gramcalorieToWattHour(number){
+function gramcalorieToWatthour(number){
     return (number / 860).toFixed(6)
 }
 
-function gramcalorieToKilowattHour(number){
+function gramcalorieToKilowatthour(number){
     return (number / 860421).toExponential()
 }
 
@@ -22,7 +22,7 @@ function gramcalorieToEletronVolt(number){
     //Formula??
 }
 
-function gramcalorieToBTU(number){
+function gramcalorieToBtu(number){
     return (number / 252).toFixed(8)
 }
 
@@ -30,7 +30,7 @@ function gramcalorieToTherm(number){
     return number / 25210000000
 }
 
-function gramcalorieToFootPoundForce(number){
+function gramcalorieToFootpoundforce(number){
     return number * 3.086
 }
 
@@ -38,10 +38,10 @@ export default {
     gramcalorieToJoule,
     gramcalorieToKilojoule,
     gramcalorieToKilocalorie,
-    gramcalorieToWattHour,
-    gramcalorieToKilowattHour,
-    gramcalorieToEletronVolt,
-    gramcalorieToBTU,
+    gramcalorieToWatthour,
+    gramcalorieToKilowatthour,
+    // gramcalorieToEletronVolt,
+    gramcalorieToBtu,
     gramcalorieToTherm,
-    gramcalorieToFootPoundForce
+    gramcalorieToFootpoundforce
 }   
