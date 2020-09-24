@@ -11,6 +11,9 @@ export const lang = {
         from: 'from',
         to: 'to',
         button: 'Convert',
+        info: {
+            copy: 'copy to clipboard!',
+        },
         error: {
             nullValue: 'You must enter a value!',
             sameUnits: "The units mustn't be the same"

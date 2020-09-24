@@ -1,5 +1,6 @@
 import returnConvert from './controller.js'
 import defineLanguage from '../assets/language/lang.js'
+
 // Setut of web controls
 const btnOpenMenu = document.querySelector('#open-menu');
 const navbar = document.querySelector('#navbar');
@@ -13,7 +14,7 @@ const btnConvert = document.querySelector('#convert');
 const groupTypes = document.querySelector('#group-types');
 const searchMenu = document.querySelector('#search-type');
 // const btnSearch = document.querySelector('#btn-search');
-const alert = document.querySelector('#alert');
+const alertMsg = document.querySelector('#alert');
 const groupTitle = document.querySelector("#group-title");
 const language = document.querySelector("#language");
 const languageOptions = document.querySelector("#language-options");
@@ -24,6 +25,13 @@ const lblFrom = document.querySelector('#lbl-from');
 const lblTo = document.querySelector('#lbl-to');
 const responsability = document.querySelector('#responsability');
 
+// create copy link
+const copyLink = document.createElement("a");
+copyLink.setAttribute('id', 'copy-link')
+const icon = document.createElement("i")
+icon.className = 'fas fa-copy';
+copyLink.appendChild(icon)
+
 // groups of metris to Menu
 let groups = {}
 
@@ -33,6 +41,29 @@ let types = {}
 
 const captilizeCase = sentence => sentence.toLowerCase().replace(/^\w/g, l => l.toUpperCase())
 const sentenceCase = sentence => sentence.toLowerCase().replace(/^\w/, l => l.toUpperCase())
+const getUrlParams = (strParams) => {
+    return strParams.replace("?", "")
+        .split("&")
+        .map(str => {
+            const param = str.split('=')
+            const obj = {}
+            obj[param[0]] = param[1]
+            return obj
+        }).reduce((obj, property) => {
+            const newObj = {...obj, ...property}
+            return newObj
+        })
+}
+
+const msg = (text, type) => {
+    // alertMsg.attr('class', '');
+    alertMsg.className = type
+    alertMsg.style.animation = 'fade-in 1s linear 0s alternate forwards';
+    alertMsg.innerHTML = `<p>${captilizeCase(text)}</p>`;
+    setTimeout(() => {
+        alertMsg.style.animation = 'fade-out 1s linear 0s alternate forwards';
+    }, 4000)
+}
 
 const fillGroups = (groups) => {
     groupTypes.innerHTML = "";
@@ -41,7 +72,7 @@ const fillGroups = (groups) => {
     }
 
     groupTypes.querySelectorAll('a').forEach(item => item.onclick = (e) => {
-        e.preventDefault;
+        e.preventDefault();
         fillTypes(item.dataset.type);
         sessionStorage.setItem('group', item.dataset.type);
         closeMenu();
@@ -52,7 +83,25 @@ const fillGroups = (groups) => {
 const fillTypes = (group) => {
     unitFrom.innerHTML = "";
     unitTo.innerHTML = "";
-    groupTitle.innerHTML = sentenceCase(groups[group]);
+
+    copyLink.onclick = (e) => {
+        const textToClipboard = `${location.origin}/?category=${group}`;
+        const temporaryText = document.createElement('input');
+        temporaryText.value = textToClipboard;
+        document.body.appendChild(temporaryText);
+        temporaryText.select()
+
+        document.execCommand('copy')
+        document.body.removeChild(temporaryText)
+        const info = config.setLanguage.form.info;
+        msg(info.copy, 'alert info')
+    }
+    
+    groupTitle.removeChild(groupTitle.firstChild);
+    groupTitle.innerHTML = sentenceCase(groups[group])
+    groupTitle.appendChild(copyLink)
+
+    
     for(const [key, value] of Object.entries(types[group])) {
         const option = `<option value="${key}" data-symbol="${value[1]}">${value[0]}</option>`;
         unitFrom.innerHTML += option;
@@ -94,25 +143,18 @@ const searchGroups = (e) => {
 // form-conversor events
 const validate = () => {
     const error = config.setLanguage.form.error;
-    const msg = (text) => {
-        alert.style.animation = 'fade-in 1s linear 0s alternate forwards';
-        alert.innerHTML = `<p>${captilizeCase(text)}</p>`;
-        setTimeout(() => {
-            alert.style.animation = 'fade-out 1s linear 0s alternate forwards';
-        }, 4000)
-    }
-
+    
     if(valueFrom.value === "") {
-        msg(error.nullValue)
+        msg(error.nullValue, 'alert error')
         return false;
     }
 
     if (unitFrom.value === unitTo.value) {
-        msg(error.sameUnits);
+        msg(error.sameUnits, 'alert error');
         return false;
     }
 
-    alert.innerHTML = "";
+    alertMsg.innerHTML = "";
     return true;
 }
 
@@ -169,13 +211,25 @@ const setup = () => {
         root.style.setProperty('--second-color', secondColor);
         root.style.setProperty('--third-color', thirdColor);
     }
+    
+    // get params from url
+    const params = getUrlParams(location.search)
+
+    let category = 'temperature';
+
     config.setLanguage = defineLanguage(config);
-    console.log(config.setLanguage);
     groups =  config.setLanguage.group;
     types =  config.setLanguage.types;
-    sessionStorage.setItem('group', 'temperature');
-    fillGroups(groups)
-    fillTypes('temperature');
+
+    if (params !== undefined && params.hasOwnProperty('category')) {
+        category = groups.hasOwnProperty(params.category) ? params.category : category
+    }
+    
+    
+    sessionStorage.setItem('group', category);
+    
+    // fillGroups(groups)
+    // fillTypes(category);
 
     return config;
 }
@@ -189,7 +243,6 @@ const selectLanguage = (e) => {
     }
 }
 const setLanguage = ({lang, img}) => {
-    console.log(lang, img)
     language.dataset.value = lang;
     language.src = img;
     language.alt = lang;
@@ -203,6 +256,17 @@ const setLanguage = ({lang, img}) => {
     types =  config.setLanguage.types;
     fillGroups(groups)
     fillTypes(sessionStorage.getItem('group'));
+
+    switch(lang) {
+        case 'pt':
+            document.body.lang = 'pt-BR'
+            break;
+        default:
+        case 'en':
+            document.body.lang = 'en-US'
+            break;
+        
+    }
 }
 
 languageOptions.querySelectorAll("a").forEach(link => {

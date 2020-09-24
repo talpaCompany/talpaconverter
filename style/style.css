@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@font-face {
+    font-family: 'centaur';
+    src: url('../assets/fonts/CENTAUR.TTF')  format('truetype'); /* Safari, Android, iOS */
+}
 
+@font-face {
+    font-family: 'Talpa Font';
+    src: url('../assets/fonts/talpa-font.ttf')  format('truetype'),
+         url('../assets/fonts/talpa-font.woff')  format('woff'); 
+}
 /* Setup */
 :root {
-    --first-color: #23CE6B;
+    --first-color: #3cb46e;
     --second-color: #F0F0E0;
     --third-color: #041B15;
     --fourth-color: #EF476F;
@@ -58,28 +67,60 @@ header .logo-align {
     justify-content: center;
 }
 
+header #brand::first-letter{
+    font-size: 1.2em;
+}
+
 header #brand {
-    font-size: 1.5em;
+    font-size: 1.4em;
+    font-family: 'centaur', 'Opens Sans', sans-serif;
+    text-transform: uppercase;
     color: var(--second-color);
     line-height: var(--menu-height);
+    margin: 0px 10px
 }
 
 header #logo {
-    width: 50px;
-    height: 50px;
+    line-height: 50px;
+    height: auto;
     animation-name: changeColor;
-    animation-duration: 15s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
+    /* animation-timing-function: cubic-bezier(1, 0, 0.2, 0); */
     animation-timing-function: linear;
     animation-direction: alternate;
+    font-size: 2.3em;
+    vertical-align: middle;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.icon-logo:after {
+    font-family: 'Talpa Font';
+    content: '\0E800';
+}
+
+#logo:hover {
+    animation-name: none;
+    opacity: 0;
 }
 
 @keyframes changeColor {
-    from {
-        filter: hue-rotate(240deg) brightness(1.8);
+
+    0% {
+        color: var(--second-color);
     }
-    to {
-        filter: hue-rotate(720deg) brightness(1.8);
+
+    25% {
+        color: var(--first-color);
+    }
+
+    75% {
+        color: var(--fourth-color)
+    }
+
+    100% {
+        color: var(--third-color);
     }
 
 }
@@ -287,9 +328,16 @@ header #dark-mode * {
     } 
 }
 
+.info {
+    background: #add8e6;
+}
+
+.info * {
+    color:black;
+}
+
 .error {
     background: #fa8072;
-    
 }
 
 .error * {
@@ -322,6 +370,21 @@ section#conversor {
     color: var(--second-color);
     text-align: center;
     margin-bottom: 20px;
+}
+
+#copy-link {
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+#copy-link i {
+    color: var(--second-color);
+    transition: .5s;
+    font-size: 1.2em;
+}
+
+#copy-link i:hover {
+    transform: scale(1.2);
 }
 
 #conversor-form label {
@@ -364,22 +427,18 @@ section#conversor {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    width: 100vw;
     background: var(--first-color);
     color: var(--second-color);
 }
 
-#result-board h2, #result-board span {
+#result-board p, #result-board span {
     color: var(--second-color);
     font-size: 2rem;
     font-weight: 100;
 }
 
-#result-board #to-value {
-    color: var(--second-color);
-    font-size: 2.2rem;
-    font-weight: 600;
-
+span#to-value {
+    font-weight: bold;
 }
 
 /* footer style */
@@ -401,7 +460,7 @@ footer p {
 }
 
 footer #responsability {
-    font-size: 0.5em;
+    font-size: 0.6em;
     text-align: center;
 }
 
@@ -425,4 +484,19 @@ footer #responsability {
         width: 100vw;
         max-width: 100%;
     }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--first-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--fourth-color);
+    border: 1px solid black;
+    border-radius: 10px;
 }

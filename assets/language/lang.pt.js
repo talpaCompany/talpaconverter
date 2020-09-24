@@ -11,6 +11,9 @@ export const lang = {
         from: 'de',
         to: 'para',
         button: 'converter',
+        info: {
+            copy: 'link copiado!',
+        },
         error: {
             nullValue: 'É necessário informar um valor!',
             sameUnits: "As unidades não podem ser iguais!"
