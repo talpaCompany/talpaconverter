@@ -88,7 +88,11 @@ export const lang = {
             gram : ["Grama", "g"],
             milligram : ["Miligrama", "mg"],
             microgram : ["Micrograma", "mcg"],
-            tonOfDisplacement : ["Tonelada de Deslocamento", "t"]
+            tonOfDisplacement : ["Tonelada de Deslocamento", "t"],
+            shortTon : ["Tonelada Curta", "t"],
+            stone : ["Stone", "st"],
+            pound : ["Libra", "lb"],
+            ounce : ["Ounce", "oz"]
         }
     }
 }
