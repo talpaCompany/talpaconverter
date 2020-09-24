@@ -88,7 +88,8 @@ export const lang = {
             tonOfDisplacement : ["Tonelada de Deslocamento", "t"],
             shortTon : ["Tonelada Curta", "t"],
             stone : ["Stone", "st"],
-            pound : ["Libra", "lb"]
+            pound : ["Libra", "lb"],
+            ounce : ["Ounce", "oz"]
         }
     }
 }

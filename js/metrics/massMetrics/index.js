@@ -7,6 +7,7 @@ import * as tonOfDisp from './tonOfDisplacementMetrics.js'
 import * as shortTon from './shortTonMetrics.js'
 import * as stone from './stoneMetrics.js'
 import * as pound from './poundMetrics.js'
+import * as ounce from './ounceMetrics.js'
 
 export default {
     ...ton.default,
@@ -17,5 +18,6 @@ export default {
     ...tonOfDisp.default,
     ...shortTon.default,
     ...stone.default,
-    ...pound.default
+    ...pound.default,
+    ...ounce.default
 }
