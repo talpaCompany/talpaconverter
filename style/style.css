@@ -362,19 +362,18 @@ section#conversor {
     padding: 10px 25px 30px;
     background: var(--first-color);
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
 }
 
 #conversor-form #other-categories {
+    display: block;
     text-decoration: underline;
-    display: inline;
     color: var(--second-color);
     padding: 0 0 20px 0;
     font-size: 1.2em;
-    vertical-align: center;
 }
 
-#conversor-form #other-categories:active {
+#conversor-form #other-categories:hover {
     opacity: .8;
 }
 

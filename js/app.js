@@ -229,7 +229,7 @@ languageOptions.querySelectorAll("a").forEach(link => {
 const translate = () => {
     const l = config.lang
     searchMenu.placeholder = sentenceCase(l.nav.searchPlaceholder)
-    otherCategories.innerHTML = sentenceCase(l.form.otherCategories)
+    otherCategories.innerHTML = captilizeCase(l.form.otherCategories)
     lblValue.innerHTML = sentenceCase(l.form.value)
     valueFrom.placeholder = sentenceCase(l.form.valuePlaceholder)
     lblFrom.innerHTML = sentenceCase(l.form.from)
