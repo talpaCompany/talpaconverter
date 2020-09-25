@@ -1,17 +1,17 @@
-function imperialGallonToAmericanGallon(number){
+function imperialgallonToAmericangallon(number){
     return (number / 1.201).toFixed(6)
 }
 
-function imperialGallonToKmPerLiter(number){
+function imperialgallonToKmperliter(number){
     return (number / 2.825).toFixed(6)
 }
 
-function imperialGallonToLiterPer100Km(number){
+function imperialgallonToLiterper100km(number){
     return 282.481 / number
 }
 
 export default {
-    imperialGallonToAmericanGallon, 
-    imperialGallonToKmPerLiter,
-    imperialGallonToLiterPer100Km
+    imperialgallonToAmericangallon, 
+    imperialgallonToKmperliter,
+    imperialgallonToLiterper100km
 }

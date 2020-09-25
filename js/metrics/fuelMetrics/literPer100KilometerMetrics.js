@@ -1,17 +1,17 @@
-function literPer100KmToAmericanGallon(number){
+function literper100kmToAmericangallon(number){
     return 235.215 / number
 }
 
-function literPer100KmToImperialGallon(number){
+function literper100kmToImperialgallon(number){
     return 282.481 / number
 }
 
-function literPer100KmToKmPerLiter(number){
+function literper100kmToKmperliter(number){
     return 100 / number
 }
 
 export default {
-    literPer100KmToAmericanGallon, 
-    literPer100KmToImperialGallon,
-    literPer100KmToKmPerLiter
+    literper100kmToAmericangallon, 
+    literper100kmToImperialgallon,
+    literper100kmToKmperliter
 }
