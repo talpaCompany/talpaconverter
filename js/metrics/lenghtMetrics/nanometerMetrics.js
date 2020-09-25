@@ -27,14 +27,14 @@ function nanometerToYard(number){
 }
 
 function nanometerToFeet(number){
-    number / 304800000000
+    return number / 304800000000
 }
 
 function nanometerToInch(number){
     return number / 2540000000
 }
 
-function nanometerToNauticalMile(number){
+function nanometerToNauticalmile(number){
     return number / 1852000000000000
 }
 
@@ -48,5 +48,5 @@ export default {
     nanometerToYard, 
     nanometerToFeet, 
     nanometerToInch,
-    nanometerToNauticalMile
+    nanometerToNauticalmile
 }

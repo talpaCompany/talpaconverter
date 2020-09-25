@@ -73,7 +73,7 @@ export const lang = {
             centimeter : ["Centimeter", "cm"],
             feet : ["Feet", "ft"],
             inch : ["Inch", "in"],
-            kilometer : ["Kilometer", "km"],
+            Kilometer : ["Kilometer", "km"],
             meter : ["Meter", "m"],
             micrometer : ["Micrometer", "μm"],
             mile : ["Mile", "mi"],

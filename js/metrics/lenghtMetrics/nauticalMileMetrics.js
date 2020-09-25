@@ -1,52 +1,52 @@
-function nauticalMileToKilometer(number){
+function nauticalmileToKilometer(number){
     return number * 1.852
 }
 
-function nauticalMileToMeter(number){
+function nauticalmileToMeter(number){
     return number * 1852
 }
 
-function nauticalMileToCentimeter(number){
+function nauticalmileToCentimeter(number){
     return number * 185200
 }
 
-function nauticalMileToMillimeter(number){
+function nauticalmileToMillimeter(number){
     return number * 1852000000
 }
 
-function nauticalMileToMicrometer(number){
+function nauticalmileToMicrometer(number){
     return number * 1852000000000
 }
 
-function nauticalMileToNanometer(number){
+function nauticalmileToNanometer(number){
     return number * 1852000000000000
 }
 
-function nauticalMileToMile(number){
+function nauticalmileToMile(number){
     return number * 1.151
 }
 
-function nauticalMileToYard(number){
+function nauticalmileToYard(number){
     return number * 2025
 }
 
-function nauticalMileToFeet(number){
+function nauticalmileToFeet(number){
     return number * 6076
 }
 
-function nauticalMileToInch(number){
+function nauticalmileToInch(number){
     return number * 72913
 }
 
 export default {
-    nauticalMileToKilometer, 
-    nauticalMileToMeter, 
-    nauticalMileToCentimeter,
-    nauticalMileToMillimeter, 
-    nauticalMileToMicrometer, 
-    nauticalMileToNanometer,
-    nauticalMileToMile, 
-    nauticalMileToYard, 
-    nauticalMileToFeet, 
-    nauticalMileToInch
+    nauticalmileToKilometer, 
+    nauticalmileToMeter, 
+    nauticalmileToCentimeter,
+    nauticalmileToMillimeter, 
+    nauticalmileToMicrometer, 
+    nauticalmileToNanometer,
+    nauticalmileToMile, 
+    nauticalmileToYard, 
+    nauticalmileToFeet, 
+    nauticalmileToInch
 }

@@ -34,7 +34,7 @@ function meterToInch(number){
     return number * 39.37
 }
 
-function meterToNauticalMile(number){
+function meterToNauticalmile(number){
     return (number / 1852).toFixed(7)
 }
 
@@ -48,5 +48,5 @@ export default {
     meterToYard, 
     meterToFeet, 
     meterToInch, 
-    meterToNauticalMile
+    meterToNauticalmile
 }

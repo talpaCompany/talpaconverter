@@ -34,7 +34,7 @@ function yardToInch(number){
     return number * 36
 }
 
-function yardToNauticalMile(number){
+function yardToNauticalmile(number){
     return number / 2025
 }
 
@@ -48,5 +48,5 @@ export default {
     yardToMile, 
     yardToFeet, 
     yardToInch, 
-    yardToNauticalMile
+    yardToNauticalmile
 }

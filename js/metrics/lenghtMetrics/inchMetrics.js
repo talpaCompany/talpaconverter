@@ -34,7 +34,7 @@ function inchToFeet(number){
     return number / 12
 }
 
-function inchToNauticalMile(number){
+function inchToNauticalmile(number){
     return number / 72913
 }
 
@@ -48,5 +48,5 @@ export default {
     inchToMile, 
     inchToYard, 
     inchToFeet, 
-    inchToNauticalMile
+    inchToNauticalmile
 }

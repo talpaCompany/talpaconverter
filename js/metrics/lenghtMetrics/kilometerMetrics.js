@@ -1,12 +1,12 @@
-function kilometerToMeters(number){
+function kilometerToMeter(number){
     return number * 1000
 }
 
-function kilometerToCentimeters(number){
+function kilometerToCentimeter(number){
     return number * 100000
 }
 
-function kilometerToMillimeters(number){
+function kilometerToMillimeter(number){
     return number * 1000000
 }
 
@@ -34,19 +34,19 @@ function kilometerToInch(number){
     return number * 39370
 }
 
-function kilometerToNauticalMile(number){
+function kilometerToNauticalmile(number){
     return (number / 1.852).toFixed(6)
 }
 
 export default {
-    kilometerToMeters, 
-    kilometerToCentimeters, 
-    kilometerToMillimeters, 
+    kilometerToMeter, 
+    kilometerToCentimeter, 
+    kilometerToMillimeter, 
     kilometerToMicrometer, 
     kilometerToNanometer,
     kilometerToMile, 
     kilometerToYard, 
     kilometerToFeet, 
     kilometerToInch, 
-    kilometerToNauticalMile
+    kilometerToNauticalmile
 }

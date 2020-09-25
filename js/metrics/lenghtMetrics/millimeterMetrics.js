@@ -34,7 +34,7 @@ function millimeterToInch(number){
     return (number / 25.4).toFixed(7)
 }
 
-function millimeterToNauticalMile(number){
+function millimeterToNauticalmile(number){
     return number / 185200
 }
 
@@ -48,5 +48,5 @@ export default {
     millimeterToYard, 
     millimeterToFeet, 
     millimeterToInch,
-    millimeterToNauticalMile
+    millimeterToNauticalmile
 }

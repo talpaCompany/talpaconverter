@@ -34,7 +34,7 @@ function micrometerToInch(number){
     return number / 25400
 }
 
-function micrometerToNauticalMile(number){
+function micrometerToNauticalmile(number){
     return number / 1852000000000
 }
 
@@ -48,5 +48,5 @@ export default {
     micrometerToYard, 
     micrometerToFeet, 
     micrometerToInch,
-    micrometerToNauticalMile
+    micrometerToNauticalmile
 }

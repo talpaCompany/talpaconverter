@@ -1,4 +1,4 @@
-function centimeterTokilometer(number){
+function centimeterToKilometer(number){
     return number / 100000
 }
 
@@ -34,12 +34,12 @@ function centimeterToInch(number){
     return (number / 2.54).toFixed(5)
 }
 
-function centimeterToNauticalMile(number){
+function centimeterToNauticalmile(number){
     return (number / 185200).toFixed(9)
 }
 
 export default {
-    centimeterTokilometer, 
+    centimeterToKilometer, 
     centimeterToMeter, 
     centimeterToMillimeter, 
     centimeterToMicrometer, 
@@ -48,5 +48,5 @@ export default {
     centimeterToYard, 
     centimeterToFeet, 
     centimeterToInch,
-    centimeterToNauticalMile
+    centimeterToNauticalmile
 }
