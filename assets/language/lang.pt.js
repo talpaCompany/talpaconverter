@@ -92,7 +92,7 @@ export const lang = {
             shortTon : ["Tonelada Curta", "t"],
             stone : ["Stone", "st"],
             pound : ["Libra", "lb"],
-            ounce : ["Ounce", "oz"]
+            ounce : ["Onça", "oz"]
         }
     }
 }
