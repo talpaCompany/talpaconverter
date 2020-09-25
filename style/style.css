@@ -365,6 +365,12 @@ section#conversor {
     max-width: 800px;
 }
 
+#conversor-form #other-categories {
+    text-decoration: underline;
+    display: inline;
+    color: var(--second-color);
+}
+
 #conversor-form h2 {
     font-size: 1.5em;
     color: var(--second-color);
