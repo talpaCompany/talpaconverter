@@ -1,47 +1,47 @@
-function tonOfDisplacementToTon(number){
+function tonofdisplacementToTon(number){
     return number * 1.016
 }
 
-function tonOfDisplacementToKilogram(number){
+function tonofdisplacementToKilo(number){
     return number * 1016
 }
 
-function tonOfDisplacementToGram(number){
+function tonofdisplacementToGram(number){
     return number * 1016000000
 }
 
-function tonOfDisplacementToMilligram(number){
+function tonofdisplacementToMilligram(number){
     return number * 1016000000000
 }
 
-function tonOfDisplacementToMicrogram(number){
+function tonofdisplacementToMicrogram(number){
     return number * 1016000000000000
 }
 
-function tonOfDisplacementToShortTon(number){
+function tonofdisplacementToShortton(number){
     return number * 1.12
 }
 
-function tonOfDisplacementToStone(number){
+function tonofdisplacementToStone(number){
     return number * 160
 }
 
-function tonOfDisplacementToPound(number){
+function tonofdisplacementToPound(number){
     return number * 2240
 }
 
-function tonOfDisplacementToOunce(number){
+function tonofdisplacementToOunce(number){
     return number * 35840
 }
 
 export default {
-    tonOfDisplacementToTon,
-    tonOfDisplacementToKilogram,
-    tonOfDisplacementToGram,
-    tonOfDisplacementToMilligram,
-    tonOfDisplacementToMicrogram,
-    tonOfDisplacementToShortTon,
-    tonOfDisplacementToStone,
-    tonOfDisplacementToPound,
-    tonOfDisplacementToOunce
+    tonofdisplacementToTon,
+    tonofdisplacementToKilo,
+    tonofdisplacementToGram,
+    tonofdisplacementToMilligram,
+    tonofdisplacementToMicrogram,
+    tonofdisplacementToShortton,
+    tonofdisplacementToStone,
+    tonofdisplacementToPound,
+    tonofdisplacementToOunce
 }

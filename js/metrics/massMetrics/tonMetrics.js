@@ -1,4 +1,4 @@
-function tonToKilogram(number){
+function tonToKilo(number){
     return number * 1000
 }
 
@@ -14,11 +14,11 @@ function tonToMicrogram(number){
     return number * 1000000000000
 }
 
-function tonToTonOfDisplacement(number){
+function tonToTonofdisplacement(number){
     return (number / 1.016).toFixed(6)
 }
 
-function tonToShortTon(number){
+function tonToShortton(number){
     return number * 1.102
 }
 
@@ -35,12 +35,12 @@ function tonToOunce(number){
 }
 
 export default {
-    tonToKilogram,
+    tonToKilo,
     tonToGram,
     tonToMilligram,
     tonToMicrogram,
-    tonToTonOfDisplacement,
-    tonToShortTon,
+    tonToTonofdisplacement,
+    tonToShortton,
     tonToStone,
     tonToPound,
     tonToOunce

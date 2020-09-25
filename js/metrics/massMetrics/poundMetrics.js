@@ -2,7 +2,7 @@ function poundToTon(number){
     return (number / 2205).toFixed(9)
 }
 
-function poundToKilogram(number){
+function poundToKilo(number){
     return (number / 2.205).toFixed(6)
 }
 
@@ -18,11 +18,11 @@ function poundToMicrogram(number){
     return number * 453600000000
 }
 
-function poundToTonOfDisplacement(number){
+function poundToTonofdisplacement(number){
     return (number / 2240).toFixed(9)
 }
 
-function poundToShortTon(number){
+function poundToShortton(number){
     return number / 2000
 }
 
@@ -36,12 +36,12 @@ function poundToOunce(number){
 
 export default {
     poundToTon,
-    poundToKilogram,
+    poundToKilo,
     poundToGram,
     poundToMilligram,
     poundToMicrogram,
-    poundToTonOfDisplacement,
-    poundToShortTon,
+    poundToTonofdisplacement,
+    poundToShortton,
     poundToStone,
     poundToOunce
 }

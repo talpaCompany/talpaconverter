@@ -2,7 +2,7 @@ function stoneToTon(number){
     return (number / 157).toFixed(8)
 }
 
-function stoneToKilogram(number){
+function stoneToKilo(number){
     return number * 6.35
 }
 
@@ -18,11 +18,11 @@ function stoneToMicrogram(number){
     return number * 635000000000
 }
 
-function stoneToTonOfDisplacement(number){
+function stoneToTonofdisplacement(number){
     return (number / 160).toFixed(5)
 }
 
-function stoneToShortTon(number){
+function stoneToShortton(number){
     return (number / 143).toFixed(3)
 }
 
@@ -36,12 +36,12 @@ function stoneToOunce(number){
 
 export default {
     stoneToTon,
-    stoneToKilogram,
+    stoneToKilo,
     stoneToGram,
     stoneToMilligram,
     stoneToMicrogram,
-    stoneToTonOfDisplacement,
-    stoneToShortTon,
+    stoneToTonofdisplacement,
+    stoneToShortton,
     stoneToPound,
     stoneToOunce
 }

@@ -2,7 +2,7 @@ function gramToTon(number){
     return number / 1000000
 }
 
-function gramToKilogram(number){
+function gramToKilo(number){
     return number / 1000
 }
 
@@ -14,11 +14,11 @@ function gramToMicrogram(number){
     return number * 1000000
 }
 
-function gramToTonOfDisplacement(number){
+function gramToTonofdisplacement(number){
     return (number / 1016000000).toExponential()
 }
 
-function gramToShortTon(number){
+function gramToShortton(number){
     return (number / 907185).toExponential()
 }
 
@@ -36,11 +36,11 @@ function gramToOunce(number){
 
 export default {
     gramToTon,
-    gramToKilogram,
+    gramToKilo,
     gramToMilligram,
     gramToMicrogram,
-    gramToTonOfDisplacement,
-    gramToShortTon,
+    gramToTonofdisplacement,
+    gramToShortton,
     gramToStone,
     gramToPound,
     gramToOunce

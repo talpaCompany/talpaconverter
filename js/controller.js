@@ -5,7 +5,7 @@ import * as energy from './metrics/energyMetrics/index.js'
 import * as frequencie from './metrics/frequencieMetrics/index.js'
 import * as fuel from './metrics/fuelMetrics/index.js'
 import * as lenght from './metrics/lenghtMetrics/index.js'
-// import * as mass from './metrics/massMetrics/index.js'
+import * as mass from './metrics/massMetrics/index.js'
 
 const converts = {
     ...finance.default,
@@ -14,7 +14,7 @@ const converts = {
     ...frequencie.default,
     ...fuel.default,
     ...lenght.default,
-    // ...mass.default,
+    ...mass.default,
     ...temperature.default,
 };
 

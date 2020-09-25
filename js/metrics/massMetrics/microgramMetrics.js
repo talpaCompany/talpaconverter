@@ -14,11 +14,11 @@ function microgramToMilligram(number){
     return number / 1000
 }
 
-function microgramToTonOfDisplacement(number){
+function microgramToTonofdisplacement(number){
     return (number / 1016000000000000).toExponential()
 }
 
-function microgramToShortTon(number){
+function microgramToShortton(number){
     return (number / 907200000000000).toExponential()
 }
 
@@ -39,8 +39,8 @@ export default {
     microgramToKilo,
     microgramToGram,
     microgramToMilligram,
-    microgramToTonOfDisplacement,
-    microgramToShortTon,
+    microgramToTonofdisplacement,
+    microgramToShortton,
     microgramToStone,
     microgramToPound,
     microgramToOunce

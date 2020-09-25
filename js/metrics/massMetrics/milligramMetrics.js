@@ -2,7 +2,7 @@ function milligramToTon(number){
     return number / 1000000000
 }
 
-function milligramToKilogram(number){
+function milligramToKilo(number){
     return number / 1000000
 }
 
@@ -14,11 +14,11 @@ function milligramToMicrogram(number){
     return number * 1000
 }
 
-function milligramToTonOfDeisplacement(number){
+function milligramToTonofdisplacement(number){
     return (number / 1016000000000).toExponential()
 }
 
-function milligramToShortTon(number){
+function milligramToShortton(number){
     return (number / 907200000000).toExponential()
 }
 
@@ -36,11 +36,11 @@ function milligramToOunce(number){
 
 export default {
     milligramToTon,
-    milligramToKilogram,
+    milligramToKilo,
     milligramToGram,
     milligramToMicrogram,
-    milligramToTonOfDeisplacement,
-    milligramToShortTon,
+    milligramToTonofdisplacement,
+    milligramToShortton,
     milligramToStone,
     milligramToPound,
     milligramToOunce

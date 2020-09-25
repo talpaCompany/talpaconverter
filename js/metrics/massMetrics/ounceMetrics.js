@@ -2,7 +2,7 @@ function ounceToTon(number){
     return (number / 35274).toExponential()
 }
 
-function ounceToKilogram(number){
+function ounceToKilo(number){
     return (number / 35.274).toFixed(7)
 }
 
@@ -18,11 +18,11 @@ function ounceToMicrogram(number){
     return number * 28350000000
 }
 
-function ounceToDisplacementTon(number){
+function ounceToTonofdisplacement(number){
     return (number / 35840).toExponential()
 }
 
-function ounceToShortTon(number){
+function ounceToShortton(number){
     return (number / 32000).toExponential()
 }
 
@@ -36,12 +36,12 @@ function ounceToPound(number){
 
 export default {
     ounceToTon,
-    ounceToKilogram,
+    ounceToKilo,
     ounceToGram,
     ounceToMilligram,
     ounceToMicrogram,
-    ounceToDisplacementTon,
-    ounceToShortTon,
+    ounceToTonofdisplacement,
+    ounceToShortton,
     ounceToStone,
     ounceToPound
 }

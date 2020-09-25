@@ -1,47 +1,47 @@
-function shortTonToTon(number){
+function shorttonToTon(number){
     return (number / 1.102).toFixed(6)
 }
 
-function shortTonToKilogram(number){
+function shorttonToKilo(number){
     return number * 907
 }
 
-function shortTonToGram(number){
+function shorttonToGram(number){
     return number * 907185
 }
 
-function shortTonToMilligram(number){
+function shorttonToMilligram(number){
     return number * 907200000000
 }
 
-function shortTonToMicrogram(number){
+function shorttonToMicrogram(number){
     return number * 907200000000000
 }
 
-function shortTonToTonOfDisplacement(number){
+function shorttonToTonofdisplacement(number){
     return (number / 1.12).toFixed(6)
 }
 
-function shortTonToStone(number){
+function shorttonToStone(number){
     return number * 143
 }
 
-function shortTonToPound(number){
+function shorttonToPound(number){
     return number * 2000
 }
 
-function shortTonToOunce(number){
+function shorttonToOunce(number){
     return number * 32000
 }
 
 export default {
-    shortTonToTon,
-    shortTonToKilogram,
-    shortTonToGram,
-    shortTonToMilligram,
-    shortTonToMicrogram,
-    shortTonToTonOfDisplacement,
-    shortTonToStone,
-    shortTonToPound,
-    shortTonToOunce
+    shorttonToTon,
+    shorttonToKilo,
+    shorttonToGram,
+    shorttonToMilligram,
+    shorttonToMicrogram,
+    shorttonToTonofdisplacement,
+    shorttonToStone,
+    shorttonToPound,
+    shorttonToOunce
 }
