@@ -1,17 +1,17 @@
-function megaHertzToHertz(number){
+function megahertzToHertz(number){
     return number * 1000000
 }
 
-function megaHertzToKiloHertz(number){
+function megahertzToKilohertz(number){
     return number * 1000
 }
 
-function megaHertzToGigaHertz(number){
+function megahertzToGigahertz(number){
     return number / 1000
 }
 
 export default {
-    megaHertzToHertz,
-    megaHertzToKiloHertz,
-    megaHertzToGigaHertz
+    megahertzToHertz,
+    megahertzToKilohertz,
+    megahertzToGigahertz
 }
