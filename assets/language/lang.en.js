@@ -6,6 +6,7 @@ export const lang = {
         searchPlaceholder: "search types"
     },
     form: {
+        otherCategories: 'other categories',
         value: 'value',
         valuePlaceholder: "Enter the value here",
         from: 'from',

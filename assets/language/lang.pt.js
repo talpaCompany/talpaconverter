@@ -6,6 +6,7 @@ export const lang = {
         searchPlaceholder: "buscar"
     },
     form: {
+        otherCategories: 'outras categorias',
         value: 'valor',
         valuePlaceholder: "coloque o valor aqui",
         from: 'de',

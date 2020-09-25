@@ -2,34 +2,34 @@ import returnConvert from './controller.js'
 import defineLanguage from '../assets/language/lang.js'
 
 // Setut of web controls
-const btnOpenMenu = document.querySelector('#open-menu');
-const navbar = document.querySelector('#navbar');
-const btnCloseMenu = document.querySelector('#close-menu');
-const valueFrom = document.querySelector('#init-value');
-const unitFrom = document.querySelector('#unitFrom');
-const unitTo = document.querySelector('#unitTo');
-const resultBoard = document.querySelector('#result-board');
-const formConversor = document.querySelector('#conversor-form');
-const btnConvert = document.querySelector('#convert');
-const groupTypes = document.querySelector('#group-types');
-const searchMenu = document.querySelector('#search-type');
-// const btnSearch = document.querySelector('#btn-search');
-const alertMsg = document.querySelector('#alert');
-const groupTitle = document.querySelector("#group-title");
-const language = document.querySelector("#language");
-const languageOptions = document.querySelector("#language-options");
-const darkMode = document.querySelector("#dark-mode");
-const root = document.documentElement;
-const lblValue = document.querySelector('#lbl-value');
-const lblFrom = document.querySelector('#lbl-from');
-const lblTo = document.querySelector('#lbl-to');
-const responsability = document.querySelector('#responsability');
+const btnOpenMenu = document.querySelector('#open-menu')
+const navbar = document.querySelector('#navbar')
+const btnCloseMenu = document.querySelector('#close-menu')
+const valueFrom = document.querySelector('#init-value')
+const unitFrom = document.querySelector('#unitFrom')
+const unitTo = document.querySelector('#unitTo')
+const resultBoard = document.querySelector('#result-board')
+const formConversor = document.querySelector('#conversor-form')
+const btnConvert = document.querySelector('#convert')
+const groupTypes = document.querySelector('#group-types')
+const searchMenu = document.querySelector('#search-type')
+const alertMsg = document.querySelector('#alert')
+const groupTitle = document.querySelector("#group-title")
+const language = document.querySelector("#language")
+const languageOptions = document.querySelector("#language-options")
+const darkMode = document.querySelector("#dark-mode")
+const root = document.documentElement
+const lblValue = document.querySelector('#lbl-value')
+const lblFrom = document.querySelector('#lbl-from')
+const lblTo = document.querySelector('#lbl-to')
+const responsability = document.querySelector('#responsability')
+const otherCategories = document.querySelector('#other-categories')
 
 // create copy link
-const copyLink = document.createElement("a");
+const copyLink = document.createElement("a")
 copyLink.setAttribute('id', 'copy-link')
 const icon = document.createElement("i")
-icon.className = 'fas fa-copy';
+icon.className = 'fas fa-copy'
 copyLink.appendChild(icon)
 
 // groups of metris to Menu
@@ -56,182 +56,135 @@ const getUrlParams = (strParams) => {
 }
 
 const msg = (text, type) => {
-    // alertMsg.attr('class', '');
+    // alertMsg.attr('class', '')
     alertMsg.className = type
-    alertMsg.style.animation = 'fade-in 1s linear 0s alternate forwards';
-    alertMsg.innerHTML = `<p>${captilizeCase(text)}</p>`;
+    alertMsg.style.animation = 'fade-in 1s linear 0s alternate forwards'
+    alertMsg.innerHTML = `<p>${captilizeCase(text)}</p>`
     setTimeout(() => {
-        alertMsg.style.animation = 'fade-out 1s linear 0s alternate forwards';
+        alertMsg.style.animation = 'fade-out 1s linear 0s alternate forwards'
     }, 4000)
 }
 
 const fillGroups = (groups) => {
-    groupTypes.innerHTML = "";
+    groupTypes.innerHTML = ""
     for (const [key, value] of Object.entries(groups)) {
         groupTypes.innerHTML += `<a href="#" data-type="${key}">${captilizeCase(value)}</a>`
     }
 
     groupTypes.querySelectorAll('a').forEach(item => item.onclick = (e) => {
-        e.preventDefault();
-        fillTypes(item.dataset.type);
-        sessionStorage.setItem('group', item.dataset.type);
-        closeMenu();
-    });
-};
-
+        e.preventDefault()
+        fillTypes(item.dataset.type)
+        sessionStorage.setItem('group', item.dataset.type)
+        closeMenu()
+    })
+}
 
 const fillTypes = (group) => {
-    unitFrom.innerHTML = "";
-    unitTo.innerHTML = "";
+    unitFrom.innerHTML = ""
+    unitTo.innerHTML = ""
 
     copyLink.onclick = (e) => {
-        const textToClipboard = `${location.origin}/?category=${group}`;
-        const temporaryText = document.createElement('input');
-        temporaryText.value = textToClipboard;
-        document.body.appendChild(temporaryText);
+        const textToClipboard = `${location.origin}/?category=${group}`
+        const temporaryText = document.createElement('input')
+        temporaryText.value = textToClipboard
+        document.body.appendChild(temporaryText)
         temporaryText.select()
 
         document.execCommand('copy')
         document.body.removeChild(temporaryText)
-        const info = config.setLanguage.form.info;
+        const info = config.lang.form.info
         msg(info.copy, 'alert info')
     }
     
-    groupTitle.removeChild(groupTitle.firstChild);
+    groupTitle.removeChild(groupTitle.firstChild)
     groupTitle.innerHTML = sentenceCase(groups[group])
     groupTitle.appendChild(copyLink)
 
     
     for(const [key, value] of Object.entries(types[group])) {
-        const option = `<option value="${key}" data-symbol="${value[1]}">${value[0]}</option>`;
-        unitFrom.innerHTML += option;
-        unitTo.innerHTML += option;
+        const option = `<option value="${key}" data-symbol="${value[1]}">${value[0]}</option>`
+        unitFrom.innerHTML += option
+        unitTo.innerHTML += option
     }
 }
 
 // navbar events
 const openMenu = (e) => {
-    e.preventDefault();
-    navbar.style.display = "initial";
+    e.preventDefault()
+    navbar.style.display = "initial"
     navbar.style.animation = "show-menu 0.5s"
 }
 
 const closeMenu = (e) => {
     if (e)  
-        e.preventDefault();
+        e.preventDefault()
     navbar.style.animation = "hide-menu 0.5s"
     setTimeout(() => {
-        navbar.style.display = "none";
-    }, 500);
+        navbar.style.display = "none"
+    }, 500)
 }
 
 // search
 const searchGroups = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     
-    const filteredGroup = {};
-    const regex = new RegExp(`\\b${searchMenu.value}`, 'gi');
+    const filteredGroup = {}
+    const regex = new RegExp(`\\b${searchMenu.value}`, 'gi')
 
     for (const [key, value] of Object.entries(groups)) {
         if(regex.test(value)) {
-            filteredGroup[key] = value;
+            filteredGroup[key] = value
         }
     }
-    fillGroups(filteredGroup);
+    fillGroups(filteredGroup)
 }
 
 // form-conversor events
 const validate = () => {
-    const error = config.setLanguage.form.error;
+    const error = config.lang.form.error
     
     if(valueFrom.value === "") {
         msg(error.nullValue, 'alert error')
-        return false;
+        return false
     }
 
     if (unitFrom.value === unitTo.value) {
-        msg(error.sameUnits, 'alert error');
-        return false;
+        msg(error.sameUnits, 'alert error')
+        return false
     }
 
-    alertMsg.innerHTML = "";
-    return true;
+    alertMsg.innerHTML = ""
+    return true
 }
 
 // convert value and validade
 const convert = (e) => {
-    if(!validate()) return false;
+    if(!validate()) return false
     
-    resultBoard.style.display = 'flex';
-    window.location.href = `#result-board`;
-    const nameFunc = `${unitFrom.value.toLowerCase()}To${captilizeCase(unitTo.value)}`;
-    console.log(nameFunc);
-    const exec = returnConvert(nameFunc);
-    const convertedValue = exec(parseFloat(valueFrom.value));
+    resultBoard.style.display = 'flex'
+    window.location.href = `#result-board`
+    const nameFunc = `${unitFrom.value.toLowerCase()}To${captilizeCase(unitTo.value)}`
+    console.log(nameFunc)
+    const exec = returnConvert(nameFunc)
+    const convertedValue = exec(parseFloat(valueFrom.value))
 
-    const valueSymbol =  unitFrom.querySelector(`[value="${unitFrom.value}"]`).dataset.symbol;
-    const convertedSymbol =  unitTo.querySelector(`[value="${unitTo.value}"]`).dataset.symbol;
+    const valueSymbol =  unitFrom.querySelector(`[value="${unitFrom.value}"]`).dataset.symbol
+    const convertedSymbol =  unitTo.querySelector(`[value="${unitTo.value}"]`).dataset.symbol
 
-    document.querySelector('#from-value').innerHTML = `${valueFrom.value} ${valueSymbol}`;
-    document.querySelector('#to-value').innerHTML = `${convertedValue} ${convertedSymbol}`;
+    document.querySelector('#from-value').innerHTML = `${valueFrom.value} ${valueSymbol}`
+    document.querySelector('#to-value').innerHTML = `${convertedValue} ${convertedSymbol}`
 }
 
 const defaultLanguage = () => {
-    if (navigator == null) return 'en'
-    console.log(navigator.language.toLowerCase());
+    if (navigator == null) return 'en-US'
+    
     switch(navigator.language.toLowerCase()) {
-        case 'en-us':
-            return 'en'
-        case 'pt-br':
-            return 'pt'
         default:
-            return 'en'
+        case 'en-us':
+            return 'en-US'
+        case 'pt-br':
+            return 'pt-BR'
     }
-
-}
-
-const setup = () => {
-    const config = {}
-    if (localStorage.getItem('language') == null || localStorage.getItem('language-flag') == null) {
-        const prefix = defaultLanguage();
-        localStorage.setItem("language", prefix)
-        localStorage.setItem("language-flag", `./assets/img/${prefix}.png`)
-        config.lang = prefix
-        config.img = `./assets/img/${prefix}.png`
-        
-    } else {
-        config.lang = localStorage.getItem('language')
-        config.img = localStorage.getItem('language-flag')
-    } 
-
-    if (localStorage.getItem('--second-color') !== "null") {
-        let secondColor = localStorage.getItem('--second-color')
-        let thirdColor = localStorage.getItem('--third-color')
-
-        root.style.setProperty('--second-color', secondColor);
-        root.style.setProperty('--third-color', thirdColor);
-    }
-    
-    // get params from url
-    const params = getUrlParams(location.search)
-
-    let category = 'temperature';
-
-    config.setLanguage = defineLanguage(config);
-    groups =  config.setLanguage.group;
-    types =  config.setLanguage.types;
-
-    if (params !== undefined && params.hasOwnProperty('category')) {
-        category = groups.hasOwnProperty(params.category) ? params.category : category
-    }
-    
-    
-    sessionStorage.setItem('group', category);
-    
-    // fillGroups(groups)
-    // fillTypes(category);
-
-    return config;
 }
 
 const selectLanguage = (e) => {
@@ -242,48 +195,41 @@ const selectLanguage = (e) => {
         languageOptions.style.display = "initial"
     }
 }
-const setLanguage = ({lang, img}) => {
-    language.dataset.value = lang;
-    language.src = img;
-    language.alt = lang;
-    localStorage.setItem("language", lang);
-    localStorage.setItem("language-flag", img);
-    config.lang = lang;
-    config.img = img;
-    config.setLanguage = defineLanguage({lang});
-    translate();
-    groups =  config.setLanguage.group;
-    types =  config.setLanguage.types;
-    fillGroups(groups)
-    fillTypes(sessionStorage.getItem('group'));
 
-    switch(lang) {
-        case 'pt':
-            document.body.lang = 'pt-BR'
-            break;
-        default:
-        case 'en':
-            document.body.lang = 'en-US'
-            break;
-        
-    }
+const setLanguage = (langCode, langImg) => {
+    language.dataset.value = langCode
+    language.src = langImg
+    language.alt = langCode
+    
+    config.lang = defineLanguage({langCode})
+    localStorage.setItem("language", langCode)
+    localStorage.setItem("language-flag", langImg)
+    translate()
+
+    groups =  config.lang.group
+    types =  config.lang.types
+    fillGroups(groups)
+    fillTypes(sessionStorage.getItem('group'))
+
+    // define page language
+    document.body.lang = langCode    
 }
 
 languageOptions.querySelectorAll("a").forEach(link => {
     link.onclick = (e) => {
-        e.preventDefault();
-        const {dataset} = link;
-        setLanguage(dataset);
-        languageOptions.style.animation = "fade-out 0.5s linear 0s normal forwards";
-        setTimeout(() => languageOptions.style.display = "none");
+        e.preventDefault()
+        const {dataset} = link
+        setLanguage(dataset.langcode, dataset.langimg)
+        languageOptions.style.animation = "fade-out 0.5s linear 0s normal forwards"
+        setTimeout(() => languageOptions.style.display = "none")
     }
-});
+})
 
 // update text with language
 const translate = () => {
-    const l = config.setLanguage;
-
-    searchMenu.placeholder = sentenceCase(l.nav.searchPlaceholder);
+    const l = config.lang
+    searchMenu.placeholder = sentenceCase(l.nav.searchPlaceholder)
+    otherCategories.innerHTML = captilizeCase(l.form.otherCategories)
     lblValue.innerHTML = sentenceCase(l.form.value)
     valueFrom.placeholder = sentenceCase(l.form.valuePlaceholder)
     lblFrom.innerHTML = sentenceCase(l.form.from)
@@ -295,28 +241,72 @@ const translate = () => {
 
 // Dark Mode
 const darkModeFunction = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     const secondColor = getComputedStyle(root).getPropertyValue('--second-color')
     const thirdColor = getComputedStyle(root).getPropertyValue('--third-color')
     root.style.setProperty('--second-color', thirdColor)
     root.style.setProperty('--third-color', secondColor)
-    localStorage.setItem('--second-color', thirdColor);
-    localStorage.setItem('--third-color', secondColor);
+    localStorage.setItem('--second-color', thirdColor)
+    localStorage.setItem('--third-color', secondColor)
     
 }
 
+const setup = () => {
+    const config = {
+        langCode: localStorage.getItem('language'),
+        langImg: localStorage.getItem('language-flag')
+    }
+    
+    // check if the lang is set
+    if (!config.langCode || !config.langImg) {
+        // get the browser language
+        config.langCode = defaultLanguage()
+        config.langImg = `./assets/img/${config.langCode}.png`
+        console.log(config.langCode, config.langImg);
+        localStorage.setItem("language", config.langCode)
+        localStorage.setItem("language-flag", config.langImg)
+    } 
+
+    // set the color previously choose
+    if (!!localStorage.getItem('--second-color')) {
+        let secondColor = localStorage.getItem('--second-color')
+        let thirdColor = localStorage.getItem('--third-color')
+
+        root.style.setProperty('--second-color', secondColor)
+        root.style.setProperty('--third-color', thirdColor)
+    }
+    
+    // get params from url
+    const params = getUrlParams(location.search)
+    // category default
+    let category = 'temperature'
+
+    config.lang = defineLanguage(config)
+    groups =  config.lang.group
+    types =  config.lang.types
+
+    if (params !== undefined && params.hasOwnProperty('category')) {
+        category = groups.hasOwnProperty(params.category) ? params.category : category
+    }
+    
+    
+    sessionStorage.setItem('group', category)
+
+    return config
+}
+
 // add events to listeners
-btnOpenMenu.onclick = openMenu;
-btnCloseMenu.onclick = closeMenu;
-searchMenu.oninput = searchGroups;
-// btnSearch.onclick = searchGroups;
-formConversor.onsubmit = e => e.preventDefault();
-btnConvert.onclick = convert;
-language.onclick = selectLanguage;
+btnOpenMenu.onclick = openMenu
+btnCloseMenu.onclick = closeMenu
+searchMenu.oninput = searchGroups
+otherCategories.onclick = openMenu
+// btnSearch.onclick = searchGroups
+formConversor.onsubmit = e => e.preventDefault()
+btnConvert.onclick = convert
+language.onclick = selectLanguage
 darkMode.onclick = darkModeFunction
 
 
 const config = setup()
-setLanguage(config)
-
-translate();
+setLanguage(config.langCode, config.langImg)
+translate()

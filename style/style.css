@@ -359,10 +359,22 @@ section#conversor {
     flex-flow: column;
     border: 1px solid rgba(221, 221, 221, 0.5);
     border-radius: 5px;
-    padding: 30px 25px;
+    padding: 10px 25px 30px;
     background: var(--first-color);
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
+}
+
+#conversor-form #other-categories {
+    display: block;
+    text-decoration: underline;
+    color: var(--second-color);
+    padding: 0 0 20px 0;
+    font-size: 1.2em;
+}
+
+#conversor-form #other-categories:hover {
+    opacity: .8;
 }
 
 #conversor-form h2 {
