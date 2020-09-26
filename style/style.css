@@ -300,7 +300,7 @@ header #dark-mode * {
 .alert {
     display: 'flex';
     flex-direction: column;
-    max-width: 800px;
+    max-width: 600px;
     margin: 10px;
     border-radius: 5px;
     width: 100%;
