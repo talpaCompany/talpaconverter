@@ -97,7 +97,8 @@ export const lang = {
             ounce : ["Onça", "oz"]
         },
         pressure : {
-            atm : ["ATM", "ATM"]
+            atm : ["ATM", "ATM"],
+            bar : ["bar", "bar"]
         }
     }
 }
