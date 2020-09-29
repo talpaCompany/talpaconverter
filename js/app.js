@@ -129,13 +129,16 @@ const searchGroups = (e) => {
     e.preventDefault()
     
     const filteredGroup = {}
-    const regex = new RegExp(`\\b${searchMenu.value}`, 'gi')
-
-    for (const [key, value] of Object.entries(groups)) {
-        if(regex.test(value)) {
-            filteredGroup[key] = value
+    const regex = new RegExp(`^(?=${searchMenu.value})`, 'i')
+    console.log(regex)
+    for (let [key, metric] of Object.entries(groups)) {
+        // console.log(metric, regex.test(metric));
+        // console.log(regex);
+        if (regex.test(metric)) {
+            filteredGroup[key] = metric
         }
     }
+    console.log(filteredGroup)
     fillGroups(filteredGroup)
 }
 

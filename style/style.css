@@ -453,6 +453,30 @@ span#to-value {
     font-weight: bold;
 }
 
+/* contact */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--menu-height);
+}
+
+#contact i {
+    color: var(--fourth-color);
+    font-size: 2em;
+    opacity: .6;
+    transition: 0.5s;
+}
+
+#contact a {
+    padding: 0 10px;
+}
+
+#contact i:hover {
+    opacity: 1;
+}
+
 /* footer style */
 
 footer {
