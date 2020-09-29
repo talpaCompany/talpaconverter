@@ -30,7 +30,8 @@ export const lang = {
         frequencie : "Frequencie",
         fuel : "Fuel",
         lenght : "Lenght",
-        mass : "Mass"
+        mass : "Mass",
+        pressure : "Pressure"
     },
     types: {
         temperature : {
@@ -94,6 +95,9 @@ export const lang = {
             stone : ["Stone", "st"],
             pound : ["Pound", "lb"],
             ounce : ["Ounce", "oz"]
+        },
+        pressure : {
+            atm : ["ATM", "ATM"]
         }
     }
 }
