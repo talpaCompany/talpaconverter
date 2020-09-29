@@ -134,7 +134,7 @@ const searchGroups = (e) => {
     for (let [key, metric] of Object.entries(groups)) {
         // console.log(metric, regex.test(metric));
         // console.log(regex);
-        if(regex.test(metric)) {
+        if (regex.test(metric)) {
             filteredGroup[key] = metric
         }
     }
