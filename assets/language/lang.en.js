@@ -100,7 +100,8 @@ export const lang = {
             atm : ["ATM", "ATM"],
             bar : ["bar", "bar"],
             pascal : ["Pascal", "Pa"],
-            psi : ["Psi", "psi"]
+            psi : ["Psi", "psi"],
+            torr : ["Torr", "Torr"]
         }
     }
 }
