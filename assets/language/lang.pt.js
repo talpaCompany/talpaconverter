@@ -99,7 +99,8 @@ export const lang = {
         pressure : {
             atm : ["ATM", "ATM"],
             bar : ["bar", "bar"],
-            pascal : ["Pascal", "Pa"]
+            pascal : ["Pascal", "Pa"],
+            psi : ["Psi", "psi"]
         }
     }
 }
