@@ -106,7 +106,8 @@ export const lang = {
         },
         time : {
             seconds : ["Second", "s"],
-            minute : ["Minute", "min"]
+            minute : ["Minute", "min"],
+            hour : ["Hour", "h"]
         }
     }
 }
