@@ -7,6 +7,7 @@ import * as fuel from './metrics/fuelMetrics/index.js'
 import * as lenght from './metrics/lenghtMetrics/index.js'
 import * as mass from './metrics/massMetrics/index.js'
 import * as pressure from './metrics/pressureMetrics/index.js'
+import * as time from './metrics/timeMetrics/index.js'
 
 const converts = {
     ...finance.default,
@@ -17,7 +18,8 @@ const converts = {
     ...lenght.default,
     ...mass.default,
     ...temperature.default,
-    ...pressure.default
+    ...pressure.default,
+    ...time.default
 };
 
 

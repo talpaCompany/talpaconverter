@@ -31,7 +31,8 @@ export const lang = {
         fuel : "Fuel",
         lenght : "Lenght",
         mass : "Mass",
-        pressure : "Pressure"
+        pressure : "Pressure",
+        time : "Time"
     },
     types: {
         temperature : {
@@ -102,6 +103,9 @@ export const lang = {
             pascal : ["Pascal", "Pa"],
             psi : ["Psi", "psi"],
             torr : ["Torr", "Torr"]
+        },
+        time : {
+            seconds : ["Second", "s"]
         }
     }
 }
