@@ -105,9 +105,10 @@ export const lang = {
             torr : ["Torr", "Torr"]
         },
         time : {
-            seconds : ["Segundos", "s"],
-            minute : ["Minutos", "min"],
-            hour : ["Hora", "h"]
+            seconds : ["Segundo(s)", "s"],
+            minute : ["Minuto(s)", "min"],
+            hour : ["Hora(s)", "h"],
+            day : ["Dia(s)", "d"]
         }
     }
 }

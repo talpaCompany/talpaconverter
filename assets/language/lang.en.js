@@ -107,7 +107,8 @@ export const lang = {
         time : {
             seconds : ["Second", "s"],
             minute : ["Minute", "min"],
-            hour : ["Hour", "h"]
+            hour : ["Hour", "h"],
+            day : ["Day", "d"]
         }
     }
 }
