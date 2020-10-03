@@ -117,7 +117,8 @@ export const lang = {
             century : ["Century(s)", "c."]
         },
         velocity : {
-            mph : ["Mph", "mph"]
+            mph : ["Mph", "mph"],
+            fps : ["Feet per second", "fps"]
         }
     }
 }
