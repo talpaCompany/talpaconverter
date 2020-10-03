@@ -120,7 +120,8 @@ export const lang = {
             mph : ["Miles per hour", "mph"],
             fps : ["Feet per second", "fps"],
             ms : ["Meters per second", "m/s"],
-            kmh : ["Kilometer per hour", "kmh"]
+            kmh : ["Kilometer per hour", "kmh"],
+            no : ["Node", "node"]
         }
     }
 }
