@@ -32,7 +32,8 @@ export const lang = {
         lenght : "Lenght",
         mass : "Mass",
         pressure : "Pressure",
-        time : "Time"
+        time : "Time",
+        velocity : "Velocity"
     },
     types: {
         temperature : {
@@ -114,6 +115,9 @@ export const lang = {
             year : ["Year(s)", "y"],
             decade : ["Decade(s)", "dec"],
             century : ["Century(s)", "c."]
+        },
+        velocity : {
+            mph : ["Mph", "mph"]
         }
     }
 }
