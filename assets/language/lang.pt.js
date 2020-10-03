@@ -109,7 +109,8 @@ export const lang = {
             minute : ["Minuto(s)", "min"],
             hour : ["Hora(s)", "h"],
             day : ["Dia(s)", "d"],
-            week : ["Semana(s)", "sem"]
+            week : ["Semana(s)", "sem"],
+            month : ["Mes(es)", "m"]
         }
     }
 }
