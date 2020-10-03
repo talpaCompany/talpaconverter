@@ -1,9 +1,11 @@
 import * as mph from './mphMetrics.js'
 import * as fps from './fpsMetrics.js'
 import * as ms from './msMetrics.js'
+import * as kmh from './kmhMetrics.js'
 
 export default {
     ...mph.default,
     ...fps.default,
-    ...ms.default
+    ...ms.default,
+    ...kmh.default
 }

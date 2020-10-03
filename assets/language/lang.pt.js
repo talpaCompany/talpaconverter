@@ -119,7 +119,8 @@ export const lang = {
         velocity : {
             mph : ["Milhas por hora", "mph"],
             fps : ["Pés por segundo", "fps"],
-            ms : ["Metros por segundo", "m/s"]
+            ms : ["Metros por segundo", "m/s"],
+            kmh : ["Quilometros por hora", "km/h"]
         }
     }
 }
