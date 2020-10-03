@@ -4,6 +4,7 @@ import * as hour from './hourMetrics.js'
 import * as day from './dayMetrics.js'
 import * as week from './weekMetrics.js'
 import * as month from './monthMetrics.js'
+import * as year from './yearMetrics.js'
 
 export default {
     ...second.default,
@@ -11,5 +12,6 @@ export default {
     ...hour.default,
     ...day.default,
     ...week.default,
-    ...month.default
+    ...month.default,
+    ...year.default
 }
