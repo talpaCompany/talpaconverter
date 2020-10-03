@@ -1,4 +1,4 @@
-function weekToSeconds(number){
+function weekToSecond(number){
     return number * 604800
 }
 
@@ -31,7 +31,7 @@ function weekToCentury(number){
 }
 
 export default {
-    weekToSeconds,
+    weekToSecond,
     weekToMinute,
     weekToHour,
     weekToDay,

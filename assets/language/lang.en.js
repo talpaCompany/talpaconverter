@@ -112,7 +112,8 @@ export const lang = {
             week : ["Week(s)", "w"],
             month : ["Month(s)", "m"],
             year : ["Year(s)", "y"],
-            decade : ["Decade(s)", "dec"]
+            decade : ["Decade(s)", "dec"],
+            century : ["Century(s)", "c."]
         }
     }
 }
