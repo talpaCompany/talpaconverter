@@ -111,7 +111,8 @@ export const lang = {
             day : ["Dia(s)", "d"],
             week : ["Semana(s)", "sem"],
             month : ["Mes(es)", "m"],
-            year : ["Ano(s)", "a"]
+            year : ["Ano(s)", "a"],
+            decade : ["Decada(s)", "dec"]
         }
     }
 }

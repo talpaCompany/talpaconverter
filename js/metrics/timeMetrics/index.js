@@ -5,6 +5,7 @@ import * as day from './dayMetrics.js'
 import * as week from './weekMetrics.js'
 import * as month from './monthMetrics.js'
 import * as year from './yearMetrics.js'
+import * as decade from './decadeMetrics.js'
 
 export default {
     ...second.default,
@@ -13,5 +14,6 @@ export default {
     ...day.default,
     ...week.default,
     ...month.default,
-    ...year.default
+    ...year.default,
+    ...decade.default
 }
