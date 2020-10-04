@@ -33,7 +33,8 @@ export const lang = {
         mass : "Massa",
         pressure : "Pressão",
         time : "Tempo",
-        velocity : "Velocidade"
+        velocity : "Velocidade",
+        area : "Area"
     },
     types: {
         temperature : {
@@ -122,6 +123,9 @@ export const lang = {
             ms : ["Metros por segundo", "m/s"],
             kmh : ["Quilometros por hora", "km/h"],
             no : ["Nó", "nó"]
+        },
+        area : {
+            squarekilometer : ["Quilômetero quadrado", "km2"]
         }
     }
 }
