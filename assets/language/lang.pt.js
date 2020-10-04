@@ -125,7 +125,8 @@ export const lang = {
             no : ["Nó", "nó"]
         },
         area : {
-            squarekilometer : ["Quilômetero quadrado", "km2"]
+            squarekilometer : ["Quilômetero quadrado", "km2"],
+            squaremeter : ["Metro Quadrado", "m2"]
         }
     }
 }
