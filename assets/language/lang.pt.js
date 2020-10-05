@@ -127,7 +127,8 @@ export const lang = {
         area : {
             squarekilometer : ["Quilômetero quadrado", "km2"],
             squaremeter : ["Metro Quadrado", "m2"],
-            squaremile : ["Milha Quadrada", "mi2"]
+            squaremile : ["Milha Quadrada", "mi2"],
+            squareyard : ["Jarda Quadrada", "yd2"]
         }
     }
 }
