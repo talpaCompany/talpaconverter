@@ -129,7 +129,8 @@ export const lang = {
             squaremeter : ["Metro Quadrado", "m2"],
             squaremile : ["Milha Quadrada", "mi2"],
             squareyard : ["Jarda Quadrada", "yd2"],
-            squarefoot : ["Pé Quadrado", "ft2"]
+            squarefoot : ["Pé Quadrado", "ft2"],
+            squareinch : ["Polegada Quadrada", "in2"]
         }
     }
 }
