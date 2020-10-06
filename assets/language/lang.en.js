@@ -128,7 +128,8 @@ export const lang = {
             squarekilometer : ["Square Kilometer", "km2"],
             squaremeter : ["Square Meter", "m2"],
             squaremile : ["Square Mile", "mi2"],
-            squareyard : ["Square Yard", "yd2"]
+            squareyard : ["Square Yard", "yd2"],
+            squarefoot : ["Square Foot", "ft2"]
         }
     }
 }
