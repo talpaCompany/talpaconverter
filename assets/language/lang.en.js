@@ -1,4 +1,7 @@
 export const lang = {
+    head: {
+        description: "Unit conversion calculator, simple and practical"
+    },
     header: {
         brand: "Talpa App"
     },
