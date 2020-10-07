@@ -131,7 +131,8 @@ export const lang = {
             squareyard : ["Jarda Quadrada", "yd2"],
             squarefoot : ["Pé Quadrado", "ft2"],
             squareinch : ["Polegada Quadrada", "in2"],
-            hectare : ["Hectare", "ha"]
+            hectare : ["Hectare", "ha"],
+            acre : ["Acre", "acre"]
         }
     }
 }

@@ -5,6 +5,7 @@ import * as squareyard from './squareYardMetrics.js'
 import * as squarefoot from './squareFootMetrics.js'
 import * as squareinch from './squareInchMetrics.js'
 import * as hectare from './hectareMetrics.js'
+import * as acre from './acreMetrics.js'
 
 export default {
     ...squarekilometer.default,
@@ -13,5 +14,6 @@ export default {
     ...squareyard.default,
     ...squarefoot.default,
     ...squareinch.default,
-    ...hectare.default
+    ...hectare.default,
+    ...acre.default
 }
