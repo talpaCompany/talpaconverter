@@ -130,7 +130,8 @@ export const lang = {
             squaremile : ["Milha Quadrada", "mi2"],
             squareyard : ["Jarda Quadrada", "yd2"],
             squarefoot : ["Pé Quadrado", "ft2"],
-            squareinch : ["Polegada Quadrada", "in2"]
+            squareinch : ["Polegada Quadrada", "in2"],
+            hectare : ["Hectare", "ha"]
         }
     }
 }
