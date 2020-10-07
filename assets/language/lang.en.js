@@ -34,7 +34,8 @@ export const lang = {
         pressure : "Pressure",
         time : "Time",
         velocity : "Velocity",
-        area : "Area"
+        area : "Area",
+        angle : "Angle"
     },
     types: {
         temperature : {
@@ -133,6 +134,9 @@ export const lang = {
             squareinch : ["Square Inch", "in2"],
             hectare : ["Hectare", "ha"],
             acre : ["Acre", "acre"]
+        },
+        angle : {
+            degree : ["Degree", "º"]
         }
     }
 }

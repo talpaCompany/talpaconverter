@@ -10,6 +10,7 @@ import * as pressure from './metrics/pressureMetrics/index.js'
 import * as time from './metrics/timeMetrics/index.js'
 import * as velocity from './metrics/velocityMetrics/index.js'
 import * as area from './metrics/areaMetrics/index.js'
+import * as angle from './metrics/angleMetrics/index.js'
 
 const converts = {
     ...finance.default,
@@ -23,7 +24,8 @@ const converts = {
     ...pressure.default,
     ...time.default,
     ...velocity.default,
-    ...area.default
+    ...area.default,
+    ...angle.default
 };
 
 
