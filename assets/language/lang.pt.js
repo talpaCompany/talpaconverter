@@ -35,7 +35,7 @@ export const lang = {
         time : "Tempo",
         velocity : "Velocidade",
         area : "Area",
-        angle : "Grau"
+        angle : "Ângulo"
     },
     types: {
         temperature : {
@@ -138,7 +138,8 @@ export const lang = {
         angle : {
             degree : ["Grau", "º"],
             grado : ["Grado", "gon"],
-            thousandangular: ["Mil Angular", "min"]
+            thousandangular: ["Mil Angular", "min"],
+            arcminute : ["Minuto de Arco", "'"]
         }
     }
 }
