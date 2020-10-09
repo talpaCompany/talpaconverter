@@ -1,6 +1,6 @@
 export const lang = {
     head: {
-        description: "Calculadora de conversão de unidades, simples e prática"
+        description: "Calculadora de conversão de unidades, simples e prática. O conversor Talpa tem muitas categorias de unidades que você pode converter."
     },
     header: {
         brand: "Talpa App"
