@@ -136,7 +136,8 @@ export const lang = {
             acre : ["Acre", "acre"]
         },
         angle : {
-            degree : ["Grau", "º"]
+            degree : ["Grau", "º"],
+            grado : ["Grado", "gon"]
         }
     }
 }
