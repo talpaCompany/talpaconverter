@@ -137,7 +137,8 @@ export const lang = {
         },
         angle : {
             degree : ["Degree", "º"],
-            grado : ["Grado", "gon"]
+            grado : ["Grado", "gon"],
+            thousandangular: ["Thousand Angular", "min"]
         }
     }
 }
