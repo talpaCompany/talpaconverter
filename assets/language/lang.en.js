@@ -148,7 +148,8 @@ export const lang = {
             arcsecond : ["Arc Second", "''"]
         },
         volume : {
-            americangallon : ["American Gallon", "gal"]
+            americangallon : ["American Gallon", "gal"],
+            americanquarterliquid : ["American Quarter Liquid", "qt"]
         }
     }
 }

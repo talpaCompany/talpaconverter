@@ -148,7 +148,8 @@ export const lang = {
             arcsecond : ["Segundo de Arco", "''"]
         },
         volume : {
-            americangaloon : ["Galão Americano", "gal"]
+            americangaloon : ["Galão Americano", "gal"],
+            americanquarterliquid : ["Quarto Líquido Americano", "qt"]
         }
     }
 }

@@ -1,4 +1,4 @@
-function americangallonToAmericanliquidonequarter(number){
+function americangallonToAmericanquarterliquid(number){
     return number * 4
 }
 
@@ -10,7 +10,7 @@ function americangallonToCup(number){
     return number * 15.773
 }
 
-function americangallonToAmericanliquidounce(number){
+function americangallonToAmericanounceliquid(number){
     return number * 128
 }
 
@@ -38,7 +38,7 @@ function americangallonToImperialgallon(number){
     return (number / 1.201).toFixed(3)
 }
 
-function americangallonToImperialonequarter(number){
+function americangallonToImperialquarter(number){
     return number * 3.331
 }
 
@@ -50,7 +50,7 @@ function americangallonToImperialcup(number){
     return number * 13.323
 }
 
-function americangallonToImperialliquidounce(number){
+function americangallonToImperiallounceliquid(number){
     return number * 133
 }
 
@@ -71,20 +71,20 @@ function americangallonToCubicinch(number){
 }
 
 export default {
-    americangallonToAmericanliquidonequarter,
+    americangallonToAmericanquarterliquid,
     americangallonToAmericanpint,
     americangallonToCup,
-    americangallonToAmericanliquidounce,
+    americangallonToAmericanounceliquid,
     americangallonToAmericasoapspoon,
     americangallonToAmericanteaspoon,
     americangallonToCubicmeter,
     americangallonToLiter,
     americangallonToMilliliter,
     americangallonToImperialgallon,
-    americangallonToImperialonequarter,
+    americangallonToImperialquarter,
     americangallonToImperialchick,
     americangallonToImperialcup,
-    americangallonToImperialliquidounce,
+    americangallonToImperiallounceliquid,
     americangallonToImperialsoapspoon,
     americangallonToImperialteaspoon,
     americangallonToCubicfoot,
