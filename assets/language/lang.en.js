@@ -149,7 +149,8 @@ export const lang = {
         },
         volume : {
             americangallon : ["American Gallon", "gal"],
-            americanquarterliquid : ["American Quarter Liquid", "qt"]
+            americanquarterliquid : ["American Quarter Liquid", "qt"],
+            americanpint : ["American Pint", "pt"]
         }
     }
 }
