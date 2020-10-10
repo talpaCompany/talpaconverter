@@ -2,6 +2,7 @@ import returnConvert from './controller.js'
 import defineLanguage from '../assets/language/lang.js'
 
 // Setut of web controls
+const metaDescription = document.querySelector('meta[name=description]');
 const btnOpenMenu = document.querySelector('#open-menu')
 const navbar = document.querySelector('#navbar')
 const btnCloseMenu = document.querySelector('#close-menu')
@@ -231,6 +232,7 @@ languageOptions.querySelectorAll("a").forEach(link => {
 // update text with language
 const translate = () => {
     const l = config.lang
+    metaDescription.setAttribute("content", sentenceCase(l.head.description))
     searchMenu.placeholder = sentenceCase(l.nav.searchPlaceholder)
     otherCategories.innerHTML = captilizeCase(l.form.otherCategories)
     lblValue.innerHTML = sentenceCase(l.form.value)
@@ -259,6 +261,15 @@ const setup = () => {
         langCode: localStorage.getItem('language'),
         langImg: localStorage.getItem('language-flag')
     }
+
+    // get params from url
+    const params = getUrlParams(location.search)
+    
+    // get url param about lang
+    if (params !== undefined && params.hasOwnProperty("langCode")) {
+        config.langCode = params.langCode
+        config.langImg = `./assets/img/${params.langCode}.png`
+    }
     
     // check if the lang is set
     if (!config.langCode || !config.langImg) {
@@ -279,8 +290,6 @@ const setup = () => {
         root.style.setProperty('--third-color', thirdColor)
     }
     
-    // get params from url
-    const params = getUrlParams(location.search)
     // category default
     let category = 'temperature'
 
@@ -291,7 +300,6 @@ const setup = () => {
     if (params !== undefined && params.hasOwnProperty('category')) {
         category = groups.hasOwnProperty(params.category) ? params.category : category
     }
-    
     
     sessionStorage.setItem('group', category)
 

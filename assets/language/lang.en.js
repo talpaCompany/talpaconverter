@@ -1,4 +1,7 @@
 export const lang = {
+    head: {
+        description: "Unit conversion calculator, simple and practical. Talpa Converter has many units categories that you can convert."
+    },
     header: {
         brand: "Talpa App"
     },
