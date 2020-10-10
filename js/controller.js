@@ -11,6 +11,7 @@ import * as time from './metrics/timeMetrics/index.js'
 import * as velocity from './metrics/velocityMetrics/index.js'
 import * as area from './metrics/areaMetrics/index.js'
 import * as angle from './metrics/angleMetrics/index.js'
+import * as volume from './metrics/volumeMetrics/index.js'
 
 const converts = {
     ...finance.default,
@@ -25,7 +26,8 @@ const converts = {
     ...time.default,
     ...velocity.default,
     ...area.default,
-    ...angle.default
+    ...angle.default,
+    ...volume.default
 };
 
 

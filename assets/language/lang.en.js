@@ -38,7 +38,8 @@ export const lang = {
         time : "Time",
         velocity : "Velocity",
         area : "Area",
-        angle : "Angle"
+        angle : "Angle",
+        volume : "Volume"
     },
     types: {
         temperature : {
@@ -145,6 +146,9 @@ export const lang = {
             arcminute : ["Arc Minute", "'"],
             radian : ["Radian", "rad"],
             arcsecond : ["Arc Second", "''"]
+        },
+        volume : {
+            americangallon : ["American Gallon", "gal"]
         }
     }
 }
