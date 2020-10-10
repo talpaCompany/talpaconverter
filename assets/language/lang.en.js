@@ -138,9 +138,10 @@ export const lang = {
         angle : {
             degree : ["Degree", "º"],
             grado : ["Grado", "gon"],
-            thousandangular: ["Thousand Angular", "min"],
+            thousandangular: ["Thousand Angular", "mil"],
             arcminute : ["Arc Minute", "'"],
-            radian : ["Radian", "rad"]
+            radian : ["Radian", "rad"],
+            arcsecond : ["Arc Second", "''"]
         }
     }
 }

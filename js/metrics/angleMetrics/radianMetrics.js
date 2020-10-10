@@ -15,7 +15,7 @@ function radianToArcminute(number){
 }
 
 function radianToArcsecond(number){
-    return umber * ((3600 * 180) / Math.PI).toFixed(0)
+    return number * ((3600 * 180) / Math.PI).toFixed(0)
 }
 
 export default {
