@@ -150,7 +150,8 @@ export const lang = {
         volume : {
             americangallon : ["American Gallon", "gal"],
             americanquarterliquid : ["American Quarter Liquid", "qt"],
-            americanpint : ["American Pint", "pt"]
+            americanpint : ["American Pint", "pt"],
+            cup : ["Cup", "C"]
         }
     }
 }
