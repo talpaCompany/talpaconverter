@@ -70,4 +70,23 @@ function americanounceliquidToCubicinch(number){
     return number * 1.805
 }
 
-americanounceliquidToCubicfoot(1)
+export default {
+    americanounceliquidToAmericangallon,
+    americanounceliquidToAmericanquarteliquid,
+    americanounceliquidToAmericanpint,
+    americanounceliquidToCup,
+    americanounceliquidToAmericansoapspoon,
+    americanounceliquidAmericanteaspoon,
+    americanounceliquidToCubicmeter,
+    americanounceliquidToLiter,
+    americanounceliquidToMilliliter,
+    americanounceliquidToImperialgallon,
+    americanounceliquidToImperialquarter,
+    americanounceliquidToImperialchick,
+    americanouceliquidToImperialcup,
+    americanounceliquidToImperialounceliquid,
+    americanounceliquidToImperialsoapspoon,
+    americanounceliquidToImperialteaapoon,
+    americanounceliquidToCubicfoot,
+    americanounceliquidToCubicinch
+}
