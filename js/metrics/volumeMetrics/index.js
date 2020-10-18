@@ -4,6 +4,7 @@ import * as americanpint from './americanPintMetrics.js'
 import * as cup from './cupMetrics.js'
 import * as americanounceliquid from './americanOunceLiquidMetrics.js'
 import * as americansoapspoon from './americanSoapSpoonMetrics.js'
+import * as americanteaspoon from './americanTeaSpoonMetrics.js'
 
 export default {
     ...americangallon.default,
@@ -11,5 +12,6 @@ export default {
     ...americanpint.default,
     ...cup.default,
     ...americanounceliquid.default,
-    ...americansoapspoon.default
+    ...americansoapspoon.default,
+    ...americanteaspoon.default
 }

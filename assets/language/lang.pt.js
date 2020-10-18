@@ -153,7 +153,8 @@ export const lang = {
             americanpint : ["Pinta Americana", "pt"],
             cup : ["Cup", "C"],
             americanounceliquid : ["Onça Americanan Líquida", "oz"],
-            americansoapspoon : ["Colher de Sopa Americana", "csp"]
+            americansoapspoon : ["Colher de Sopa Americana", "csp"],
+            americanteaspoon : ["Colher de Chá Americana", "tsp"]
         }
     }
 }
